@@ -1,0 +1,4 @@
+[28-Apr-2014 21:33:47 UTC] PHP Notice:  Undefined variable: produto in D:\Servidor\htdocs\qlinda\view\vendas\novo.php on line 108
+[28-Apr-2014 21:33:47 UTC] PHP Fatal error:  Call to a member function getId() on a non-object in D:\Servidor\htdocs\qlinda\view\vendas\novo.php on line 108
+[28-Apr-2014 21:33:59 UTC] PHP Notice:  Undefined variable: produto in D:\Servidor\htdocs\qlinda\view\vendas\novo.php on line 100
+[28-Apr-2014 21:33:59 UTC] PHP Fatal error:  Call to a member function getId() on a non-object in D:\Servidor\htdocs\qlinda\view\vendas\novo.php on line 100

@@ -1,0 +1,184 @@
+[16-Apr-2014 18:05:00 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC), expecting ',' or ';' in C:\wamp\www\qlinda\model\produto.class.php on line 24
+[16-Apr-2014 18:05:00 UTC] PHP Stack trace:
+[16-Apr-2014 18:05:00 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\produto\lista.php:0
+[16-Apr-2014 18:05:24 UTC] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in C:\wamp\www\qlinda\view\produto\lista.php on line 116
+[16-Apr-2014 18:05:24 UTC] PHP Stack trace:
+[16-Apr-2014 18:05:24 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\produto\lista.php:0
+[16-Apr-2014 18:05:24 UTC] PHP   2. mysql_num_rows() C:\wamp\www\qlinda\view\produto\lista.php:116
+[16-Apr-2014 18:08:44 UTC] PHP Notice:  Undefined index: Códio de Barras in C:\wamp\www\qlinda\view\produto\lista.php on line 147
+[16-Apr-2014 18:08:44 UTC] PHP Stack trace:
+[16-Apr-2014 18:08:44 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\produto\lista.php:0
+[16-Apr-2014 18:11:29 UTC] PHP Fatal error:  Cannot use object of type estoque as array in C:\wamp\www\qlinda\view\produto\lista.php on line 151
+[16-Apr-2014 18:11:29 UTC] PHP Stack trace:
+[16-Apr-2014 18:11:29 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\produto\lista.php:0
+[16-Apr-2014 18:12:19 UTC] PHP Fatal error:  Cannot use object of type estoque as array in C:\wamp\www\qlinda\view\produto\lista.php on line 151
+[16-Apr-2014 18:12:19 UTC] PHP Stack trace:
+[16-Apr-2014 18:12:19 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\produto\lista.php:0
+[16-Apr-2014 18:12:56 UTC] PHP Fatal error:  Cannot use object of type estoque as array in C:\wamp\www\qlinda\view\produto\lista.php on line 151
+[16-Apr-2014 18:12:56 UTC] PHP Stack trace:
+[16-Apr-2014 18:12:56 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\produto\lista.php:0
+[16-Apr-2014 18:12:57 UTC] PHP Fatal error:  Cannot use object of type estoque as array in C:\wamp\www\qlinda\view\produto\lista.php on line 151
+[16-Apr-2014 18:12:57 UTC] PHP Stack trace:
+[16-Apr-2014 18:12:57 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\produto\lista.php:0
+[16-Apr-2014 18:13:21 UTC] PHP Fatal error:  Cannot use object of type estoque as array in C:\wamp\www\qlinda\view\produto\lista.php on line 151
+[16-Apr-2014 18:13:21 UTC] PHP Stack trace:
+[16-Apr-2014 18:13:21 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\produto\lista.php:0
+[16-Apr-2014 18:15:08 UTC] PHP Fatal error:  Cannot use object of type estoque as array in C:\wamp\www\qlinda\view\produto\lista.php on line 152
+[16-Apr-2014 18:15:08 UTC] PHP Stack trace:
+[16-Apr-2014 18:15:08 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\produto\lista.php:0
+[16-Apr-2014 18:16:27 UTC] PHP Fatal error:  Cannot use object of type estoque as array in C:\wamp\www\qlinda\view\produto\lista.php on line 151
+[16-Apr-2014 18:16:27 UTC] PHP Stack trace:
+[16-Apr-2014 18:16:27 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\produto\lista.php:0
+[16-Apr-2014 18:16:28 UTC] PHP Fatal error:  Cannot use object of type estoque as array in C:\wamp\www\qlinda\view\produto\lista.php on line 151
+[16-Apr-2014 18:16:28 UTC] PHP Stack trace:
+[16-Apr-2014 18:16:28 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\produto\lista.php:0
+[16-Apr-2014 18:16:29 UTC] PHP Fatal error:  Cannot use object of type estoque as array in C:\wamp\www\qlinda\view\produto\lista.php on line 151
+[16-Apr-2014 18:16:29 UTC] PHP Stack trace:
+[16-Apr-2014 18:16:29 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\produto\lista.php:0
+[16-Apr-2014 18:16:30 UTC] PHP Fatal error:  Cannot use object of type estoque as array in C:\wamp\www\qlinda\view\produto\lista.php on line 151
+[16-Apr-2014 18:16:30 UTC] PHP Stack trace:
+[16-Apr-2014 18:16:30 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\produto\lista.php:0
+[16-Apr-2014 18:16:31 UTC] PHP Fatal error:  Cannot use object of type estoque as array in C:\wamp\www\qlinda\view\produto\lista.php on line 151
+[16-Apr-2014 18:16:31 UTC] PHP Stack trace:
+[16-Apr-2014 18:16:31 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\produto\lista.php:0
+[16-Apr-2014 18:17:03 UTC] PHP Notice:  Undefined property: estoque::$getQuantidade in C:\wamp\www\qlinda\view\produto\lista.php on line 152
+[16-Apr-2014 18:17:03 UTC] PHP Stack trace:
+[16-Apr-2014 18:17:03 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\produto\lista.php:0
+[16-Apr-2014 18:17:05 UTC] PHP Notice:  Undefined property: estoque::$getQuantidade in C:\wamp\www\qlinda\view\produto\lista.php on line 152
+[16-Apr-2014 18:17:05 UTC] PHP Stack trace:
+[16-Apr-2014 18:17:05 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\produto\lista.php:0
+[16-Apr-2014 18:20:48 UTC] PHP Notice:  Undefined property: estoque::$getQuantidade in C:\wamp\www\qlinda\view\produto\lista.php on line 152
+[16-Apr-2014 18:20:48 UTC] PHP Stack trace:
+[16-Apr-2014 18:20:48 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\produto\lista.php:0
+[16-Apr-2014 18:20:50 UTC] PHP Notice:  Undefined property: estoque::$getQuantidade in C:\wamp\www\qlinda\view\produto\lista.php on line 152
+[16-Apr-2014 18:20:50 UTC] PHP Stack trace:
+[16-Apr-2014 18:20:50 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\produto\lista.php:0
+[16-Apr-2014 18:20:51 UTC] PHP Notice:  Undefined property: estoque::$getQuantidade in C:\wamp\www\qlinda\view\produto\lista.php on line 152
+[16-Apr-2014 18:20:51 UTC] PHP Stack trace:
+[16-Apr-2014 18:20:51 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\produto\lista.php:0
+[16-Apr-2014 18:20:52 UTC] PHP Notice:  Undefined property: estoque::$getQuantidade in C:\wamp\www\qlinda\view\produto\lista.php on line 152
+[16-Apr-2014 18:20:52 UTC] PHP Stack trace:
+[16-Apr-2014 18:20:52 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\produto\lista.php:0
+[16-Apr-2014 18:21:54 UTC] PHP Fatal error:  Cannot use object of type estoque as array in C:\wamp\www\qlinda\view\produto\lista.php on line 152
+[16-Apr-2014 18:21:54 UTC] PHP Stack trace:
+[16-Apr-2014 18:21:54 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\produto\lista.php:0
+[16-Apr-2014 18:21:55 UTC] PHP Fatal error:  Cannot use object of type estoque as array in C:\wamp\www\qlinda\view\produto\lista.php on line 152
+[16-Apr-2014 18:21:55 UTC] PHP Stack trace:
+[16-Apr-2014 18:21:55 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\produto\lista.php:0
+[16-Apr-2014 18:25:22 UTC] PHP Notice:  Undefined property: estoque::$getQuantidade in C:\wamp\www\qlinda\view\produto\lista.php on line 152
+[16-Apr-2014 18:25:22 UTC] PHP Stack trace:
+[16-Apr-2014 18:25:22 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\produto\lista.php:0
+[16-Apr-2014 18:25:23 UTC] PHP Notice:  Undefined property: estoque::$getQuantidade in C:\wamp\www\qlinda\view\produto\lista.php on line 152
+[16-Apr-2014 18:25:23 UTC] PHP Stack trace:
+[16-Apr-2014 18:25:23 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\produto\lista.php:0
+[16-Apr-2014 18:25:24 UTC] PHP Notice:  Undefined property: estoque::$getQuantidade in C:\wamp\www\qlinda\view\produto\lista.php on line 152
+[16-Apr-2014 18:25:24 UTC] PHP Stack trace:
+[16-Apr-2014 18:25:24 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\produto\lista.php:0
+[16-Apr-2014 18:25:26 UTC] PHP Notice:  Undefined property: estoque::$getQuantidade in C:\wamp\www\qlinda\view\produto\lista.php on line 152
+[16-Apr-2014 18:25:26 UTC] PHP Stack trace:
+[16-Apr-2014 18:25:26 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\produto\lista.php:0
+[16-Apr-2014 18:25:27 UTC] PHP Notice:  Undefined property: estoque::$getQuantidade in C:\wamp\www\qlinda\view\produto\lista.php on line 152
+[16-Apr-2014 18:25:27 UTC] PHP Stack trace:
+[16-Apr-2014 18:25:27 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\produto\lista.php:0
+[16-Apr-2014 18:33:12 UTC] PHP Fatal error:  Cannot redeclare categoria::setId() in C:\wamp\www\qlinda\model\categoria.class.php on line 34
+[16-Apr-2014 18:33:12 UTC] PHP Stack trace:
+[16-Apr-2014 18:33:12 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\produto\lista.php:0
+[16-Apr-2014 19:00:33 UTC] PHP Fatal error:  Call to a member function getId() on a non-object in C:\wamp\www\qlinda\view\produto\edita.php on line 120
+[16-Apr-2014 19:00:33 UTC] PHP Stack trace:
+[16-Apr-2014 19:00:33 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\produto\edita.php:0
+[18-Apr-2014 14:22:32 UTC] PHP Fatal error:  Class 'cliente' not found in D:\Servidor\htdocs\qlinda\view\produto\edita.php on line 20
+[18-Apr-2014 14:48:27 UTC] PHP Notice:  Undefined variable: cliente in D:\Servidor\htdocs\qlinda\view\produto\edita.php on line 113
+[18-Apr-2014 14:48:27 UTC] PHP Fatal error:  Call to a member function getId() on a non-object in D:\Servidor\htdocs\qlinda\view\produto\edita.php on line 113
+[18-Apr-2014 15:03:41 UTC] PHP Notice:  Undefined variable: cliente in D:\Servidor\htdocs\qlinda\view\produto\edita.php on line 113
+[18-Apr-2014 15:03:41 UTC] PHP Fatal error:  Call to a member function getId() on a non-object in D:\Servidor\htdocs\qlinda\view\produto\edita.php on line 113
+[18-Apr-2014 15:03:49 UTC] PHP Notice:  Undefined variable: cliente in D:\Servidor\htdocs\qlinda\view\produto\edita.php on line 113
+[18-Apr-2014 15:03:49 UTC] PHP Fatal error:  Call to a member function getId() on a non-object in D:\Servidor\htdocs\qlinda\view\produto\edita.php on line 113
+[18-Apr-2014 15:15:48 UTC] PHP Fatal error:  Class 'categoria' not found in D:\Servidor\htdocs\qlinda\view\produto\edita.php on line 22
+[18-Apr-2014 15:16:10 UTC] PHP Notice:  Undefined variable: cliente in D:\Servidor\htdocs\qlinda\view\produto\edita.php on line 153
+[18-Apr-2014 15:16:10 UTC] PHP Fatal error:  Call to a member function getId() on a non-object in D:\Servidor\htdocs\qlinda\view\produto\edita.php on line 153
+[18-Apr-2014 17:27:16 UTC] PHP Notice:  Undefined variable: cliente in D:\Servidor\htdocs\qlinda\view\produto\edita.php on line 36
+[18-Apr-2014 17:27:17 UTC] PHP Fatal error:  Call to a member function getId() on a non-object in D:\Servidor\htdocs\qlinda\view\produto\edita.php on line 36
+[18-Apr-2014 17:42:44 UTC] PHP Fatal error:  Call to undefined function replace() in D:\Servidor\htdocs\qlinda\view\produto\edita.php on line 32
+[18-Apr-2014 17:44:45 UTC] PHP Warning:  str_replace() expects at least 3 parameters, 2 given in D:\Servidor\htdocs\qlinda\view\produto\edita.php on line 32
+[18-Apr-2014 17:44:45 UTC] PHP Warning:  str_replace() expects at least 3 parameters, 2 given in D:\Servidor\htdocs\qlinda\view\produto\edita.php on line 33
+[18-Apr-2014 17:45:44 UTC] PHP Fatal error:  Call to a member function getQuantidade() on a non-object in D:\Servidor\htdocs\qlinda\view\produto\lista.php on line 157
+[18-Apr-2014 17:52:34 UTC] PHP Fatal error:  Call to a member function getQuantidade() on a non-object in D:\Servidor\htdocs\qlinda\view\produto\lista.php on line 157
+[18-Apr-2014 17:52:44 UTC] PHP Fatal error:  Call to a member function getQuantidade() on a non-object in D:\Servidor\htdocs\qlinda\view\produto\lista.php on line 157
+[18-Apr-2014 17:57:32 UTC] PHP Fatal error:  Call to a member function getQuantidade() on a non-object in D:\Servidor\htdocs\qlinda\view\produto\lista.php on line 157
+[18-Apr-2014 21:46:08 UTC] PHP Notice:  Undefined variable: data in D:\Servidor\htdocs\qlinda\view\produto\edita.php on line 51
+[18-Apr-2014 21:46:08 UTC] PHP Fatal error:  Call to a member function getId() on a non-object in D:\Servidor\htdocs\qlinda\view\produto\edita.php on line 53
+[18-Apr-2014 21:46:55 UTC] PHP Notice:  Undefined variable: data in D:\Servidor\htdocs\qlinda\view\produto\edita.php on line 51
+[18-Apr-2014 21:46:55 UTC] PHP Fatal error:  Call to a member function getId() on a non-object in D:\Servidor\htdocs\qlinda\view\produto\edita.php on line 53
+[18-Apr-2014 21:49:01 UTC] PHP Fatal error:  Call to a member function getId() on a non-object in D:\Servidor\htdocs\qlinda\view\produto\edita.php on line 52
+[18-Apr-2014 21:51:58 UTC] PHP Fatal error:  Call to a member function getId() on a non-object in D:\Servidor\htdocs\qlinda\view\produto\edita.php on line 52
+[18-Apr-2014 21:54:32 UTC] PHP Fatal error:  Call to a member function getId() on a non-object in D:\Servidor\htdocs\qlinda\view\produto\edita.php on line 131
+[18-Apr-2014 21:54:32 UTC] PHP Fatal error:  Call to a member function getQuantidade() on a non-object in D:\Servidor\htdocs\qlinda\view\produto\lista.php on line 157
+[18-Apr-2014 22:09:36 UTC] PHP Fatal error:  Call to undefined function dia() in D:\Servidor\htdocs\qlinda\view\produto\edita.php on line 45
+[18-Apr-2014 22:15:43 UTC] PHP Fatal error:  Call to a member function getQuantidade() on a non-object in D:\Servidor\htdocs\qlinda\view\produto\lista.php on line 157
+[18-Apr-2014 22:15:54 UTC] PHP Fatal error:  Call to a member function getQuantidade() on a non-object in D:\Servidor\htdocs\qlinda\view\produto\lista.php on line 157
+[18-Apr-2014 22:15:59 UTC] PHP Fatal error:  Call to a member function getQuantidade() on a non-object in D:\Servidor\htdocs\qlinda\view\produto\lista.php on line 157
+[18-Apr-2014 22:16:01 UTC] PHP Fatal error:  Call to a member function getQuantidade() on a non-object in D:\Servidor\htdocs\qlinda\view\produto\lista.php on line 157
+[19-Apr-2014 03:36:46 UTC] PHP Warning:  mysql_insert_id(): Access denied for user ''@'localhost' (using password: NO) in D:\Servidor\htdocs\qlinda\view\produto\edita.php on line 44
+[19-Apr-2014 03:36:46 UTC] PHP Warning:  mysql_insert_id(): A link to the server could not be established in D:\Servidor\htdocs\qlinda\view\produto\edita.php on line 44
+[19-Apr-2014 03:45:30 UTC] PHP Warning:  mysql_insert_id(): Access denied for user ''@'localhost' (using password: NO) in D:\Servidor\htdocs\qlinda\controller\produto.controller.class.php on line 24
+[19-Apr-2014 03:45:30 UTC] PHP Warning:  mysql_insert_id(): A link to the server could not be established in D:\Servidor\htdocs\qlinda\controller\produto.controller.class.php on line 24
+[19-Apr-2014 03:45:34 UTC] PHP Warning:  mysql_insert_id(): Access denied for user ''@'localhost' (using password: NO) in D:\Servidor\htdocs\qlinda\controller\produto.controller.class.php on line 24
+[19-Apr-2014 03:45:34 UTC] PHP Warning:  mysql_insert_id(): A link to the server could not be established in D:\Servidor\htdocs\qlinda\controller\produto.controller.class.php on line 24
+[19-Apr-2014 03:50:08 UTC] PHP Parse error:  syntax error, unexpected T_RETURN in D:\Servidor\htdocs\qlinda\functions\crud.class.php on line 114
+[19-Apr-2014 03:54:07 UTC] PHP Fatal error:  Call to a member function getQuantidade() on a non-object in D:\Servidor\htdocs\qlinda\view\produto\lista.php on line 157
+[19-Apr-2014 04:01:17 UTC] PHP Fatal error:  Call to a member function getQuantidade() on a non-object in D:\Servidor\htdocs\qlinda\view\produto\lista.php on line 157
+[19-Apr-2014 04:01:26 UTC] PHP Fatal error:  Call to a member function getQuantidade() on a non-object in D:\Servidor\htdocs\qlinda\view\produto\lista.php on line 157
+[19-Apr-2014 04:09:15 UTC] PHP Notice:  Undefined variable: id in D:\Servidor\htdocs\qlinda\view\produto\edita.php on line 54
+[19-Apr-2014 04:09:47 UTC] PHP Warning:  mysql_insert_id(): Access denied for user ''@'localhost' (using password: NO) in D:\Servidor\htdocs\qlinda\controller\produto.controller.class.php on line 24
+[19-Apr-2014 04:09:47 UTC] PHP Warning:  mysql_insert_id(): A link to the server could not be established in D:\Servidor\htdocs\qlinda\controller\produto.controller.class.php on line 24
+[19-Apr-2014 04:13:33 UTC] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, integer given in D:\Servidor\htdocs\qlinda\functions\crud.class.php on line 183
+[19-Apr-2014 04:13:33 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in D:\Servidor\htdocs\qlinda\view\produto\edita.php on line 154
+[19-Apr-2014 04:13:41 UTC] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, integer given in D:\Servidor\htdocs\qlinda\functions\crud.class.php on line 183
+[19-Apr-2014 04:13:41 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in D:\Servidor\htdocs\qlinda\view\produto\edita.php on line 154
+[19-Apr-2014 04:15:57 UTC] PHP Fatal error:  Call to a member function getQuantidade() on a non-object in D:\Servidor\htdocs\qlinda\view\produto\lista.php on line 157
+[19-Apr-2014 04:16:05 UTC] PHP Fatal error:  Call to a member function getQuantidade() on a non-object in D:\Servidor\htdocs\qlinda\view\produto\lista.php on line 157
+[19-Apr-2014 04:31:17 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in D:\Servidor\htdocs\qlinda\view\produto\edita.php on line 44
+[19-Apr-2014 04:31:17 UTC] PHP Fatal error:  Call to a member function getQuantidade() on a non-object in D:\Servidor\htdocs\qlinda\view\produto\lista.php on line 157
+[19-Apr-2014 04:31:22 UTC] PHP Fatal error:  Call to a member function getQuantidade() on a non-object in D:\Servidor\htdocs\qlinda\view\produto\lista.php on line 157
+[19-Apr-2014 04:31:48 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in D:\Servidor\htdocs\qlinda\view\produto\edita.php on line 44
+[19-Apr-2014 04:31:48 UTC] PHP Fatal error:  Call to a member function getQuantidade() on a non-object in D:\Servidor\htdocs\qlinda\view\produto\lista.php on line 157
+[19-Apr-2014 04:32:09 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in D:\Servidor\htdocs\qlinda\view\produto\edita.php on line 44
+[19-Apr-2014 04:32:53 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in D:\Servidor\htdocs\qlinda\view\produto\edita.php on line 44
+[19-Apr-2014 14:18:30 UTC] PHP Warning:  mysql_insert_id() expects parameter 1 to be resource, object given in D:\Servidor\htdocs\qlinda\functions\crud.class.php on line 201
+[19-Apr-2014 14:18:30 UTC] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in D:\Servidor\htdocs\qlinda\functions\crud.class.php on line 183
+[19-Apr-2014 14:18:30 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in D:\Servidor\htdocs\qlinda\view\produto\edita.php on line 156
+[19-Apr-2014 14:19:17 UTC] PHP Warning:  mysql_insert_id() expects parameter 1 to be resource, object given in D:\Servidor\htdocs\qlinda\functions\crud.class.php on line 201
+[19-Apr-2014 14:19:17 UTC] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, string given in D:\Servidor\htdocs\qlinda\functions\crud.class.php on line 183
+[19-Apr-2014 14:19:17 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in D:\Servidor\htdocs\qlinda\view\produto\edita.php on line 156
+[19-Apr-2014 14:23:41 UTC] PHP Warning:  mysql_fetch_object(): supplied argument is not a valid MySQL result resource in D:\Servidor\htdocs\qlinda\functions\crud.class.php on line 75
+[19-Apr-2014 14:34:49 UTC] PHP Notice:  Undefined index: id in D:\Servidor\htdocs\qlinda\view\produto\edita.php on line 55
+[19-Apr-2014 14:35:34 UTC] PHP Notice:  Undefined index:  in D:\Servidor\htdocs\qlinda\view\produto\edita.php on line 56
+[19-Apr-2014 14:39:05 UTC] PHP Fatal error:  Call to a member function getQuantidade() on a non-object in D:\Servidor\htdocs\qlinda\view\produto\lista.php on line 157
+[19-Apr-2014 14:53:26 UTC] PHP Notice:  Undefined variable: id in D:\Servidor\htdocs\qlinda\view\produto\edita.php on line 55
+[19-Apr-2014 14:59:28 UTC] PHP Notice:  Undefined property: EstoqueController::$tabela in D:\Servidor\htdocs\qlinda\controller\estoque.controller.class.php on line 27
+[19-Apr-2014 15:01:17 UTC] PHP Notice:  Undefined property: EstoqueController::$tabela in D:\Servidor\htdocs\qlinda\controller\estoque.controller.class.php on line 26
+[19-Apr-2014 15:01:18 UTC] PHP Notice:  Undefined property: EstoqueController::$tabela in D:\Servidor\htdocs\qlinda\controller\estoque.controller.class.php on line 26
+[19-Apr-2014 15:01:20 UTC] PHP Notice:  Undefined property: EstoqueController::$tabela in D:\Servidor\htdocs\qlinda\controller\estoque.controller.class.php on line 26
+[19-Apr-2014 15:05:40 UTC] PHP Notice:  Undefined property: EstoqueController::$tabela in D:\Servidor\htdocs\qlinda\controller\estoque.controller.class.php on line 27
+[19-Apr-2014 15:05:40 UTC] PHP Fatal error:  Class '' not found in D:\Servidor\htdocs\qlinda\controller\estoque.controller.class.php on line 27
+[19-Apr-2014 15:05:42 UTC] PHP Notice:  Undefined property: EstoqueController::$tabela in D:\Servidor\htdocs\qlinda\controller\estoque.controller.class.php on line 27
+[19-Apr-2014 15:05:42 UTC] PHP Fatal error:  Class '' not found in D:\Servidor\htdocs\qlinda\controller\estoque.controller.class.php on line 27
+[19-Apr-2014 15:05:44 UTC] PHP Notice:  Undefined property: EstoqueController::$tabela in D:\Servidor\htdocs\qlinda\controller\estoque.controller.class.php on line 27
+[19-Apr-2014 15:05:44 UTC] PHP Fatal error:  Class '' not found in D:\Servidor\htdocs\qlinda\controller\estoque.controller.class.php on line 27
+[19-Apr-2014 15:06:19 UTC] PHP Notice:  Undefined property: EstoqueController::$tabela in D:\Servidor\htdocs\qlinda\controller\estoque.controller.class.php on line 26
+[19-Apr-2014 15:06:19 UTC] PHP Fatal error:  Class '' not found in D:\Servidor\htdocs\qlinda\controller\estoque.controller.class.php on line 26
+[19-Apr-2014 15:06:20 UTC] PHP Notice:  Undefined property: EstoqueController::$tabela in D:\Servidor\htdocs\qlinda\controller\estoque.controller.class.php on line 26
+[19-Apr-2014 15:06:20 UTC] PHP Fatal error:  Class '' not found in D:\Servidor\htdocs\qlinda\controller\estoque.controller.class.php on line 26
+[19-Apr-2014 20:21:14 UTC] PHP Notice:  Undefined variable: cliente in D:\Servidor\htdocs\qlinda\view\produto\lista.php on line 41
+[19-Apr-2014 20:21:14 UTC] PHP Fatal error:  Call to a member function remove() on a non-object in D:\Servidor\htdocs\qlinda\view\produto\lista.php on line 41
+[19-Apr-2014 20:22:56 UTC] PHP Notice:  Undefined variable: cliente in D:\Servidor\htdocs\qlinda\view\produto\lista.php on line 41
+[19-Apr-2014 20:22:56 UTC] PHP Fatal error:  Call to a member function remove() on a non-object in D:\Servidor\htdocs\qlinda\view\produto\lista.php on line 41
+[19-Apr-2014 20:24:08 UTC] PHP Notice:  Undefined variable: cliente in D:\Servidor\htdocs\qlinda\view\produto\lista.php on line 41
+[19-Apr-2014 20:24:08 UTC] PHP Fatal error:  Call to a member function remove() on a non-object in D:\Servidor\htdocs\qlinda\view\produto\lista.php on line 41
+[19-Apr-2014 20:24:15 UTC] PHP Notice:  Undefined variable: cliente in D:\Servidor\htdocs\qlinda\view\produto\lista.php on line 41
+[19-Apr-2014 20:24:15 UTC] PHP Fatal error:  Call to a member function remove() on a non-object in D:\Servidor\htdocs\qlinda\view\produto\lista.php on line 41
+[19-Apr-2014 20:26:55 UTC] PHP Fatal error:  Call to a member function getQuantidade() on a non-object in D:\Servidor\htdocs\qlinda\view\produto\lista.php on line 160
+[19-Apr-2014 20:27:06 UTC] PHP Notice:  Undefined index: margem_lucro in D:\Servidor\htdocs\qlinda\view\produto\edita.php on line 39
+[19-Apr-2014 20:27:11 UTC] PHP Fatal error:  Call to a member function getQuantidade() on a non-object in D:\Servidor\htdocs\qlinda\view\produto\lista.php on line 160
+[19-Apr-2014 20:35:14 UTC] PHP Notice:  Undefined index: margem_lucro in D:\Servidor\htdocs\qlinda\view\produto\edita.php on line 39
+[22-Apr-2014 23:23:05 UTC] PHP Notice:  Undefined index: margem_lucro in D:\Servidor\htdocs\qlinda\view\produto\edita.php on line 39

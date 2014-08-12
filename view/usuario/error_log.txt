@@ -1,0 +1,17 @@
+[15-Apr-2014 16:31:07 UTC] PHP Warning:  mysql_connect():  in C:\wamp\www\qlinda\functions\connection.class.php on line 11
+[15-Apr-2014 16:31:07 UTC] PHP Stack trace:
+[15-Apr-2014 16:31:07 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\usuario\home.php:0
+[15-Apr-2014 16:31:07 UTC] PHP   2. Crud->listObjects() C:\wamp\www\qlinda\view\usuario\home.php:21
+[15-Apr-2014 16:31:07 UTC] PHP   3. Crud->execute_query() C:\wamp\www\qlinda\functions\crud.class.php:189
+[15-Apr-2014 16:31:07 UTC] PHP   4. Connection->openConnection() C:\wamp\www\qlinda\functions\crud.class.php:208
+[15-Apr-2014 16:31:07 UTC] PHP   5. mysql_connect() C:\wamp\www\qlinda\functions\connection.class.php:11
+[16-Apr-2014 01:07:10 UTC] PHP Notice:  Undefined variable: functions in D:\Servidor\htdocs\qlinda\view\usuario\sobre.php on line 49
+[16-Apr-2014 01:07:10 UTC] PHP Fatal error:  Call to a member function geraMenu() on a non-object in D:\Servidor\htdocs\qlinda\view\usuario\sobre.php on line 49
+[18-Apr-2014 17:58:18 UTC] PHP Notice:  A session had already been started - ignoring session_start() in D:\Servidor\htdocs\qlinda\controller\usuario.controller.class.php on line 31
+[19-Apr-2014 15:37:39 UTC] PHP Notice:  A session had already been started - ignoring session_start() in D:\Servidor\htdocs\qlinda\controller\usuario.controller.class.php on line 31
+[19-Apr-2014 15:45:07 UTC] PHP Notice:  A session had already been started - ignoring session_start() in D:\Servidor\htdocs\qlinda\controller\usuario.controller.class.php on line 31
+[19-Apr-2014 16:00:57 UTC] PHP Notice:  Undefined index: erro in D:\Servidor\htdocs\qlinda\view\usuario\login.php on line 79
+[19-Apr-2014 16:01:01 UTC] PHP Notice:  Undefined index: erro in D:\Servidor\htdocs\qlinda\view\usuario\login.php on line 79
+[19-Apr-2014 19:18:27 UTC] PHP Notice:  A session had already been started - ignoring session_start() in D:\Servidor\htdocs\qlinda\controller\usuario.controller.class.php on line 31
+[19-Apr-2014 20:37:23 UTC] PHP Notice:  A session had already been started - ignoring session_start() in D:\Servidor\htdocs\qlinda\controller\usuario.controller.class.php on line 31
+[28-Apr-2014 23:15:37 UTC] PHP Notice:  A session had already been started - ignoring session_start() in D:\Servidor\htdocs\qlinda\controller\usuario.controller.class.php on line 31

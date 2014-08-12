@@ -1,0 +1,45 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	background-image:url("../img/background_geral.jpg") !important;
+	background-position: top right !important;
+	background-repeat:no-repeat !important;
+	background-attachment:fixed !important;
+	background-clip:border-box !important;
+	padding-top: 80px !important;
+	padding-bottom: 40px !important;
+	background-color:#FFF !important;
+	font-family: museo;
+}
+
+.nav{
+	padding-top: 18px !important;
+	margin-top: 10px !important;	
+}
+
+@font-face {
+	font-family: escrita;
+	src: url("../font/Maria_lucia.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: museo;
+	src: url("../font/museo.otf") format("truetype");
+}
+
+
+@font-face {
+	font-family: braile;
+	src: url("../font/SimBraille.ttf") format("truetype");
+}
+
+
+.paragrafoEscrito{
+	font:50px escrita;
+}
+
+.paragrafoBraile{
+	text-align:center;
+	font:50px braile;
+}

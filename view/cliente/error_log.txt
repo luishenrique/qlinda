@@ -1,0 +1,42 @@
+[16-Apr-2014 17:50:50 UTC] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in C:\wamp\www\qlinda\view\cliente\lista.php on line 112
+[16-Apr-2014 17:50:50 UTC] PHP Stack trace:
+[16-Apr-2014 17:50:50 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\cliente\lista.php:0
+[16-Apr-2014 17:50:50 UTC] PHP   2. mysql_num_rows() C:\wamp\www\qlinda\view\cliente\lista.php:112
+[16-Apr-2014 17:53:09 UTC] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in C:\wamp\www\qlinda\view\cliente\lista.php on line 112
+[16-Apr-2014 17:53:09 UTC] PHP Stack trace:
+[16-Apr-2014 17:53:09 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\cliente\lista.php:0
+[16-Apr-2014 17:53:09 UTC] PHP   2. mysql_num_rows() C:\wamp\www\qlinda\view\cliente\lista.php:112
+[16-Apr-2014 17:53:12 UTC] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in C:\wamp\www\qlinda\view\cliente\lista.php on line 112
+[16-Apr-2014 17:53:12 UTC] PHP Stack trace:
+[16-Apr-2014 17:53:12 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\cliente\lista.php:0
+[16-Apr-2014 17:53:12 UTC] PHP   2. mysql_num_rows() C:\wamp\www\qlinda\view\cliente\lista.php:112
+[16-Apr-2014 17:53:13 UTC] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in C:\wamp\www\qlinda\view\cliente\lista.php on line 112
+[16-Apr-2014 17:53:13 UTC] PHP Stack trace:
+[16-Apr-2014 17:53:13 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\cliente\lista.php:0
+[16-Apr-2014 17:53:13 UTC] PHP   2. mysql_num_rows() C:\wamp\www\qlinda\view\cliente\lista.php:112
+[16-Apr-2014 17:55:12 UTC] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in C:\wamp\www\qlinda\view\cliente\lista.php on line 112
+[16-Apr-2014 17:55:12 UTC] PHP Stack trace:
+[16-Apr-2014 17:55:12 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\cliente\lista.php:0
+[16-Apr-2014 17:55:12 UTC] PHP   2. mysql_num_rows() C:\wamp\www\qlinda\view\cliente\lista.php:112
+[16-Apr-2014 17:55:12 UTC] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, integer given in C:\wamp\www\qlinda\view\cliente\lista.php on line 115
+[16-Apr-2014 17:55:12 UTC] PHP Stack trace:
+[16-Apr-2014 17:55:12 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\cliente\lista.php:0
+[16-Apr-2014 17:55:12 UTC] PHP   2. mysql_num_rows() C:\wamp\www\qlinda\view\cliente\lista.php:115
+[16-Apr-2014 17:55:24 UTC] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in C:\wamp\www\qlinda\view\cliente\lista.php on line 112
+[16-Apr-2014 17:55:24 UTC] PHP Stack trace:
+[16-Apr-2014 17:55:24 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\cliente\lista.php:0
+[16-Apr-2014 17:55:24 UTC] PHP   2. mysql_num_rows() C:\wamp\www\qlinda\view\cliente\lista.php:112
+[16-Apr-2014 17:55:24 UTC] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, integer given in C:\wamp\www\qlinda\view\cliente\lista.php on line 115
+[16-Apr-2014 17:55:24 UTC] PHP Stack trace:
+[16-Apr-2014 17:55:24 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\cliente\lista.php:0
+[16-Apr-2014 17:55:24 UTC] PHP   2. mysql_num_rows() C:\wamp\www\qlinda\view\cliente\lista.php:115
+[16-Apr-2014 17:55:43 UTC] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in C:\wamp\www\qlinda\view\cliente\lista.php on line 112
+[16-Apr-2014 17:55:43 UTC] PHP Stack trace:
+[16-Apr-2014 17:55:43 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\cliente\lista.php:0
+[16-Apr-2014 17:55:43 UTC] PHP   2. mysql_num_rows() C:\wamp\www\qlinda\view\cliente\lista.php:112
+[16-Apr-2014 17:58:10 UTC] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, integer given in C:\wamp\www\qlinda\view\cliente\lista.php on line 116
+[16-Apr-2014 17:58:10 UTC] PHP Stack trace:
+[16-Apr-2014 17:58:10 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\cliente\lista.php:0
+[16-Apr-2014 17:58:10 UTC] PHP   2. mysql_num_rows() C:\wamp\www\qlinda\view\cliente\lista.php:116
+[18-Apr-2014 14:36:15 UTC] PHP Catchable fatal error:  Object of class DateTime could not be converted to string in D:\Servidor\htdocs\qlinda\functions\reflection.class.php on line 58
+[18-Apr-2014 17:33:22 UTC] PHP Notice:  Undefined index: email in D:\Servidor\htdocs\qlinda\view\cliente\edita.php on line 38
