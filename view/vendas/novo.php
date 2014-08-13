@@ -88,7 +88,7 @@ if (isset($_POST['submit'])) {
 			<?php
 			}
 			?>
-			<form autocomplete="off" class="form-horizontal" id="contact-form" action="" method="post" enctype="multipart/form-data">
+			<form autocomplete="off" class="form-horizontal" id="formulario_pedido" name="formulario_pedido" action="" method="post" enctype="multipart/form-data">
 
 				<div class="control-group">
 					<label class="control-label" for="cliente">Cliente</label>
@@ -148,7 +148,7 @@ if (isset($_POST['submit'])) {
 								<td align="right"><div class="input-prepend alert-info" style="padding: 5px"> <span class="add-on" style="padding: 10px; width: 100px">Desconto R$</span><input class="input-medium" type="text" onkeyup="calculaTotal();" name="desconto" value="0" id="desconto" style="padding: 10px"></td>
 								</tr>
 							<tr>
-									<td style="padding-left: 10px" align="right">Forma de Pagamento:</td>  <td><select id="forma_pagamento" name="forma_pagamento" class="input-block-level">
+									<td style="padding-left: 10px" align="right">Forma de Pagamento:</td>  <td><select id="forma_pagamento" name="forma_pagamento" class="select input-block-level">
 									<option value="avista">à vista</option>
 									<option value="cartao">Cartão de Crédito</option>
 									<option value="aprazo">à prazo</option>
@@ -246,10 +246,10 @@ if (isset($_POST['submit'])) {
 			 }
 			
 			
-			function BuscarProduto(id, campo) {
+			function BuscarProduto(codigo_barras, campo) {
 				idcampo = apenasNumeros(campo);
 				$.ajax({
-					url : "busca_produtos.php?id=" + id,
+					url : "busca_produtos.php?codigo_barras=" + codigo_barras,
 					cache : false,
 					type : "GET",
 					dataType : "json",
@@ -258,7 +258,7 @@ if (isset($_POST['submit'])) {
 					},
 					success : function(data) {
 						if (data.id === undefined){
-							alert('Código inválido');
+							alert('Código inválido');							
 							$("#produto_id" + idcampo).val(data.id);
 							$("#produto_descricao" + idcampo).val(data.descricao);
 							$("#produto_valor"+ idcampo).val(data.valor_venda);
