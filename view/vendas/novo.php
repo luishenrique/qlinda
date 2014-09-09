@@ -84,7 +84,7 @@ if (isset($_POST['submit'])) {
 			<?php
 			if(!empty($_GET["tipo"])){
 			?>
-			
+
 			<?php
 			}
 			?>
@@ -93,8 +93,9 @@ if (isset($_POST['submit'])) {
 				<div class="control-group">
 					<label class="control-label" for="cliente">Cliente</label>
 					<div class="controls">
-						<input class="input-mini" type="text" name="cliente_id"  id="cliente_id" required value="" disabled="disabled">
-						<input class="input-xlarge" type="text" name="cliente_nome"  id="cliente_nome" required value="" disabled="disabled">
+						<input class="input-mini" type="text" name="cliente_id"  id="cliente_id" readonly="readonly">
+						<input class="input-xlarge" type="text" name="cliente_nome"  id="cliente_nome" required value="" readonly="readonly">
+						<input type="hidden" name="produtos" value="0" id="produtos"/>
 						<a href="#myModal" role="button" class="btn" data-toggle="modal"> Pesquisar</a>
 					</div>
 				</div>
@@ -108,16 +109,17 @@ if (isset($_POST['submit'])) {
 								<td width="30px">Quantidade</td>
 								<td width="90px" style="text-align:center">Valor Unit.</td>
 								<td width="150px" style="text-align:center">Valor Total</td>
-								<td style="text-align:center"><i class="icon-remove"></i> </td>
+								<td style="text-align:center"><i class="icon-remove"></i></td>
 							</tr>
 
 							<tr>
 
 								<td>
-								<input class="input-block-level" type="text" name="produto_id1" onkeypress="procurarProduto(this.id, this.value, event);" id="produto_id1" value="">
+								<input class="input-block-level" type="text" name="produto_cod1" onkeypress="procurarProduto(this.id, this.value, event);" id="produto_cod1" value="">
+								<input class="input-block-level" type="hidden" name="produto_id1" onkeypress="procurarProduto(this.id, this.value, event);" id="produto_id1" value="">
 								</td>
 								<td>
-								<input class="input-block-level" type="text" name="produto_descricao1"  id="produto_descricao1" disabled="disabled">
+								<input class="input-block-level" type="text" name="produto_descricao1"  id="produto_descricao1" readonly="readonly">
 								</td>
 								<td>
 								<select class="input-block-level" id="produto_quantidade1" name="produto_quantidade1" onchange="atualizarTotal(this.value, this.id);">
@@ -130,73 +132,96 @@ if (isset($_POST['submit'])) {
 									<option value="7">7</option>
 									<option value="8">8</option>
 									<option value="9">9</option>
-									<option value="10">10</option>									
-								</select>
+									<option value="10">10</option>
+								</select></td>
+								<td>
+								<div class="input-prepend">
+									<span class="add-on">R$</span>
+									<input class="input-mini" type="text" name="produto_valor1"  id="produto_valor1" readonly="readonly">
 								</td>
-								<td><div class="input-prepend"> <span class="add-on">R$</span><input class="input-mini" type="text" name="produto_valor1"  id="produto_valor1" disabled="disabled"></td></div>
-								<td><div class="input-prepend"> <span class="add-on">R$</span><input class="input-medium" type="text" name="produto_valortotal1"  id="produto_valortotal1" disabled="disabled"></td></div>
-								<td style="text-align:center"><a class="btn btn-medium btn-danger" onclick="removerLinha(this);"><i class="icon-remove"> </i></a></td>
-							</tr>							
-						</table>
-					
-						<input type="button" class="btn btn btn" id="botaoadd" value="Adicionar Produto (F2)" style="margin: 10px">
-					
-						
-						<table width="100%" style="background-color:#EEE;">
-							
-							<tr><td style="padding-left: 10px; width: 20%" align="right">Observação: </td>  <td><input type="text" class="input-block-level" id="obs" name="obs"/></td>
-								<td align="right"><div class="input-prepend alert-info" style="padding: 5px"> <span class="add-on" style="padding: 10px; width: 100px">Desconto R$</span><input class="input-medium" type="text" onkeyup="calculaTotal();" name="desconto" value="0" id="desconto" style="padding: 10px"></td>
-								</tr>
-							<tr>
-									<td style="padding-left: 10px" align="right">Forma de Pagamento:</td>  <td><select id="forma_pagamento" name="forma_pagamento" class="select input-block-level">
-									<option value="avista">à vista</option>
-									<option value="cartao">Cartão de Crédito</option>
-									<option value="aprazo">à prazo</option>
-								</select></td>		
-																																						
-								<td align="right"><div class="input-prepend alert-danger" style="padding: 5px;"> <span class="add-on" style="padding: 10px; width: 100px">TOTAL R$</span><input class="input-medium" type="text" name="somartudo"  value="0" id="somartudo" style="font-size: 20px; padding: 10px; disabled='disabled'"></td>
-							</tr>
-						</table>
 					</div>
+					<td>
+					<div class="input-prepend">
+						<span class="add-on">R$</span>
+						<input class="input-medium" type="text" name="produto_valortotal1"  id="produto_valortotal1" readonly="readonly">
+					</td>
 				</div>
+				<td style="text-align:center"><a class="btn btn-medium btn-danger" onclick="removerLinha(this);"><i class="icon-remove"> </i></a></td>
+				</tr>
+				</table>
 
-				<div class="modal hide fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="!display: none" aria-hidden="true">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-							×
-						</button>
-						<h3 id="myModalLabel">Pesquisar Cliente</h3>
-					</div>
-					<div class="modal-body">
-						<input class="input-xlarge" type="text" name="busca" placeholder="Digite o nome do Cliente" id="busca"/>
-						<a class="btn btn-medium" onclick="buscaCliente();" type="button"><i class="icon-search"></i></a>
-						<p id="lista_cliente">
+				<input type="button" class="btn btn btn" id="botaoadd" value="Adicionar Produto (F2)" style="margin: 10px">
 
-						</p>
-					</div>
+				<table width="100%" style="background-color:#EEE;">
 
-				</div>
-				<div class="control-group">
-					<div class="controls">
-						<input type="button" class="btn btn-success btn-large" value="Salvar" name="submit">
-						<a href="lista.php">
-						<input type="button" class="btn btn btn-large" value="Cancelar">
-						</a>
-					</div>
-				</div>
-			</form>
-			<hr>
-			<footer>
-				<p>
-					&copy; Company 2014
+					<tr>
+						<td style="padding-left: 10px; width: 20%" align="right">Observação: </td><td>
+						<input type="text" class="input-block-level" id="obs" name="obs"/>
+						</td>
+						<td align="right">
+						<div class="input-prepend alert-info" style="padding: 5px">
+							<span class="add-on" style="padding: 10px; width: 100px">Desconto R$</span>
+							<input class="input-medium" type="text" onkeyup="calculaTotal();" name="desconto" value="0" id="desconto" style="padding: 10px">
+						</td>
+					</tr>
+					<tr>
+						<td style="padding-left: 10px" align="right">Forma de Pagamento:</td><td>
+						<select id="forma_pagamento" name="forma_pagamento" class="select input-block-level">
+							<option value="avista">à vista</option>
+							<option value="cartao">Cartão de Crédito</option>
+							<option value="aprazo">à prazo</option>
+						</select></td>
+
+						<td align="right">
+						<div class="input-prepend alert-danger" style="padding: 5px;">
+							<span class="add-on" style="padding: 10px; width: 100px">TOTAL R$</span>
+							<input class="input-medium" readonly="readonly" type="text" name="somartudo"  value="0" id="somartudo" style="font-size: 20px; padding: 10px; readonly="readonly"></td></tr></table>
+							</div>
+									</div>
+		<div class="modal hide fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="!display: none" aria-hidden="true">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					×
+				</button>
+				<h3 id="myModalLabel">Pesquisar Cliente</h3>
+			</div>
+			<div class="modal-body">
+				<input class="input-xlarge" type="text" name="busca" placeholder="Digite o nome do Cliente" id="busca"/>
+				<a class="btn btn-medium" onclick="buscaCliente();" type="button"><i class="icon-search"></i></a>
+				<p id="lista_cliente">
+
 				</p>
-			</footer>
+			</div>
+
+		</div>
+		
+	
+		
+		<div class="control-group">
+			<div class="controls">
+				<input type="button" class="btn btn-success btn-large" value="Salvar" name="btn_salvar" id="btn_salvar">
+				<a href="lista.php">
+				<input type="button" class="btn btn btn-large" value="Cancelar">
+		
+				</a><div class="status" id="status" style="display: none; float: right">Salvando... <img src="../../img/ajax-loader.gif" /></div>
+			</div>
+		</div>
+		</form>	
+		
+		
+		
+		<hr>
+		<footer>
+			<p>
+				&copy; Company 2014
+			</p>
+		</footer>
 		</div>
 		<!-- /container -->
 
 		<!-- Javascript -->
 		<script src="../../js/geral.js"></script>
-		<script src="../../js/jquery.js"></script>		
+		<script src="../../js/jquery.js"></script>
 		<script src="../../js/jquery.validate.min.js"></script>
 		<script src="../../js/bootstrap-transition.js"></script>
 		<script src="../../js/bootstrap-alert.js"></script>
@@ -217,7 +242,28 @@ if (isset($_POST['submit'])) {
 		<script type="text/javascript" charset="utf-8">
 			var linha = 1;
 			var total = 0;
-		
+
+			$("#btn_salvar").click(function() {
+					dados = $("#formulario_pedido").serialize();
+					$.ajax({
+						url : "salvar_pedido.php",
+						cache : false,
+						data : dados,
+						type : "POST",
+						beforeSend : function() {
+							$(".status").css({display:"block"}); 
+						},
+						success : function(data) {
+							$(".status").css({display:"none"});  
+							$(window.document.location).attr('href','lista.php');
+							
+						},
+						error : function() {
+							$("#status").text("Erro ao salvar Pedido!");
+						},
+					})				
+			});
+
 			$(document).ready(function() {
 				$('input').keypress(function(e) {
 					var code = null;
@@ -226,26 +272,25 @@ if (isset($_POST['submit'])) {
 				});
 			});
 
-
 			$(document).ready(function() {
-				$('body').keypress(function(e) {					
-					if (e.keyCode === 113){
+				$('body').keypress(function(e) {
+					if (e.keyCode === 113) {
 						addlinha();
 					};
 				});
 			});
-			
+
 			function calculaTotal() {
-				total = 0;			
-				$("input[id^='produto_valortotal']").each(function(index, value){					
+				total = 0;
+				$("input[id^='produto_valortotal']").each(function(index, value) {
 					var valor = Number($(this).val());
-      				if (!isNaN(valor)) total += valor;		
-      		   });
-      		   total -= Number($('#desconto').val().replace(",","."));
-      		   $('#somartudo').val(total.toFixed(2));
-			 }
-			
-			
+					if (!isNaN(valor))
+						total += valor;
+				});
+				total -= Number($('#desconto').val().replace(",", "."));
+				$('#somartudo').val(total.toFixed(2));
+			}
+
 			function BuscarProduto(codigo_barras, campo) {
 				idcampo = apenasNumeros(campo);
 				$.ajax({
@@ -257,22 +302,23 @@ if (isset($_POST['submit'])) {
 						$("#produto_descricao" + idcampo).val("Aguarde");
 					},
 					success : function(data) {
-						if (data.id === undefined){
-							alert('Código inválido');							
+						if (data.id === undefined) {
+							alert('Código inválido');
 							$("#produto_id" + idcampo).val(data.id);
 							$("#produto_descricao" + idcampo).val(data.descricao);
-							$("#produto_valor"+ idcampo).val(data.valor_venda);
-							$("#produto_valortotal"+ idcampo).val(data.valor_venda);	
-							$("#produto_quantidade"+ idcampo).val(1);	
-							calculaTotal();							
+							$("#produto_valor" + idcampo).val(data.valor_venda);
+							$("#produto_valortotal" + idcampo).val(data.valor_venda);
+							$("#produto_quantidade" + idcampo).val(1);
+							calculaTotal();
 						} else {
+							$("#produto_id" + idcampo).val(data.id	);
 							$("#produto_descricao" + idcampo).val(data.descricao);
-							$("#produto_valor"+ idcampo).val(data.valor_venda);
-							$("#produto_valortotal"+ idcampo).val(data.valor_venda);
-							$("#produto_quantidade"+ idcampo).val(1);
+							$("#produto_valor" + idcampo).val(data.valor_venda);
+							$("#produto_valortotal" + idcampo).val(data.valor_venda);
+							$("#produto_quantidade" + idcampo).val(1);
 							calculaTotal();
 							addlinha();
-							$("#produto_id" + idcampo).attr('disabled', 'true');							
+							$("#produto_id" + idcampo).attr('readonly', 'true');
 						}
 					},
 					error : function() {
@@ -280,56 +326,46 @@ if (isset($_POST['submit'])) {
 					},
 				})
 			}
-			
-			
-			function removerLinha(obj){				
-                var objTR = obj.parentNode.parentNode;
-                var objTable = objTR.parentNode;
-                var indexTR = objTR.rowIndex;
-                if (confirm("Tem certeza que deseja remover esse produto?")){
-                	objTable.deleteRow(indexTR);	
-                }     
-                calculaTotal();       
-			}		
-			
-			
-			function atualizarTotal(unidade, id){
-				idnum = apenasNumeros(id);				
-				var valor = ($('#produto_valor'+ idnum).val());
-				var total = valor * unidade;						
+
+			function removerLinha(obj) {
+				var objTR = obj.parentNode.parentNode;
+				var objTable = objTR.parentNode;
+				var indexTR = objTR.rowIndex;
+				if (confirm("Tem certeza que deseja remover esse produto?")) {
+					objTable.deleteRow(indexTR);
+				}
+				calculaTotal();
+			}
+
+			function atualizarTotal(unidade, id) {
+				idnum = apenasNumeros(id);
+				var valor = ($('#produto_valor' + idnum).val());
+				var total = valor * unidade;
 				$('#produto_valortotal' + idnum).val(total.toFixed(2));
 				calculaTotal();
-			}		
+			}
 
 
 			$(document).ready(function() {
-			$('#botaoadd').on('click', addlinha); 
+				$('#botaoadd').on('click', addlinha);
 			});
-			
-			
-			function addlinha(){										
-				linha++;
-				var texto = "<tr><td><input class=\"input-block-level\" type=\"text\" name=\"produto_id" 
-				+ linha	+ "\"id=\"produto_id" 
-				+ linha + "\"  onkeypress=\"procurarProduto(this.id, this.value, event);\" value=\"\"></td><td><input class=\"input-block-level\" type=\"text\" name=\"produto_descricao" 
-				+ linha + "\" id=\"produto_descricao" 
-				+ linha + "\"disabled=\"disabled\"></td><td><select class=\"input-block-level\" id=\"produto_quantidade"
-				+ linha + "\" name=\"produto_quantidade" + linha + "\" onchange=\"atualizarTotal(this.value, this.id);\"><option value=\"1\" selected=\"selected\">1</option><option value=\"2\">2</option><option value=\"3\">3</option><option value=\"4\">4</option><option value=\"5\">5</option><option value=\"6\">6</option><option value=\"7\">7</option><option value=\"8\">8</option><option value=\"9\">9</option><option value=\"10\">10</option></select></td><td><div class=\"input-prepend\"> <span class=\"add-on\">R$</span><input class=\"input-mini\" type=\"text\" name=\"produto_valor" 
-				+ linha + "\" id=\"produto_valor" 
-				+ linha + "\" disabled=\"disabled\"></td></div><td><div class=\"input-prepend\"><span class=\"add-on\">R$</span><input class=\"input-medium\" type=\"text\" name=\"produto_valortotal"
-				+ linha + "\"  id=\"produto_valortotal"
-				+ linha + "\" disabled=\"disabled\"></td></div><td style=\"text-align:center\"><a class=\"btn btn-medium btn-danger\" onclick=\"removerLinha(this);\"><i class=\"icon-remove\"></i></a></td></tr>";
-				$("#pedido").append(texto);						
-			};
-			
 
-			function procurarProduto(campo, valor, event){				
-				if (event.keyCode === 13) {					
+			function addlinha() {
+				linha++;
+				var texto = "<tr><td><input class=\"input-block-level\" type=\"text\" name=\"produto_id" + linha + "\"id=\"produto_id" + linha + "\"  onkeypress=\"procurarProduto(this.id, this.value, event);\" value=\"\"></td><td><input class=\"input-block-level\" type=\"text\" name=\"produto_descricao"+ linha +"\" id=\"produto_descricao" + linha + "\"readonly=\"readonly\"></td><td><select class=\"input-block-level\" id=\"produto_quantidade" + linha + "\" name=\"produto_quantidade" + linha + "\" onchange=\"atualizarTotal(this.value, this.id);\"><option value=\"1\" selected=\"selected\">1</option><option value=\"2\">2</option><option value=\"3\">3</option><option value=\"4\">4</option><option value=\"5\">5</option><option value=\"6\">6</option><option value=\"7\">7</option><option value=\"8\">8</option><option value=\"9\">9</option><option value=\"10\">10</option></select></td><td><div class=\"input-prepend\"> <span class=\"add-on\">R$</span><input class=\"input-mini\" type=\"text\" name=\"produto_valor" + linha + "\" id=\"produto_valor" + linha + "\" readonly=\"readonly\"></td></div><td><div class=\"input-prepend\"><span class=\"add-on\">R$</span><input class=\"input-medium\" type=\"text\" name=\"produto_valortotal" + linha + "\"  id=\"produto_valortotal" + linha + "\" readonly=\"readonly\"></td></div><td style=\"text-align:center\"><a class=\"btn btn-medium btn-danger\" onclick=\"removerLinha(this);\"><i class=\"icon-remove\"></i></a></td></tr>";
+				$("#pedido").append(texto);
+				$("#produtos").val(linha);
+				
+			};
+
+			function procurarProduto(campo, valor, event) {
+				if (event.keyCode === 13) {
 					BuscarProduto(valor, campo);
 				}
 			};
 
 			function apenasNumeros(string) {
+
 				var numsStr = string.replace(/[^0-9]/g, '');
 				return parseInt(numsStr);
 			}

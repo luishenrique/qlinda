@@ -3,17 +3,22 @@
 class Functions {
 
 	public function converterData($strData) {
-
 		// Converte a data de dd/mm/aaaa para o formato: aaaa-mm-dd
 		$strDataFinal = implode('-', array_reverse(explode('/', $strData)));
 		return $strDataFinal;
 	}
 
 	public function converterDataPadrao($strData) {
-
 		// Converte a data de aaaa-mm-dd para o formato: dd/mm/aaaa
 		$strDataFinal = implode('/', array_reverse(explode('-', $strData)));
 		return $strDataFinal;
+	}
+
+	public function converterDataHoraPadrao($strData) {
+		// Converte datetime do banco para 00/00/0000 - 00:00:00
+		$strDataFinal = explode(" ", $strData);
+		return implode("/", array_reverse(explode("-", $strDataFinal[0]))) . " - " . $strDataFinal[1];
+
 	}
 
 	public function geraMenu($tipoDeUsuario = 0) {
