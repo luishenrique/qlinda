@@ -8,8 +8,8 @@ error_reporting(E_ALL);
 /*
  * 	Descrição do Arquivo
  * 	@author - Luis Henrique Rodrigues
- * 	@data de criação - 08/09/2014
- * 	@arquivo  - lista.php
+ * 	@data de criação - 09/09/2014
+ * 	@arquivo  - visualizar.php
  */
 
 require_once ("../../controller/pedido_venda.controller.class.php");
@@ -18,28 +18,35 @@ require_once ("../../model/pedido_venda.class.php");
 require_once ("../../controller/cliente.controller.class.php");
 require_once ("../../model/cliente.class.php");
 
+require_once ("../../controller/itens_venda.controller.class.php");
+require_once ("../../model/itens_venda.class.php");
+
+require_once ("../../controller/produto.controller.class.php");
+require_once ("../../model/produto.class.php");
+
+
 include_once ("../../functions/functions.class.php");
 
-require ("../../view/usuario/verifica.php");
-
-$pedido_venda = new PedidoVendaController();
+$pedido_controller = new PedidoVendaController();
+$pedido_venda = new pedido_venda();
 
 $cliente_controller = new ClienteController();
 $cliente = new cliente();
 
-if (isset($_GET['busca'])){
-    $registros = $pedido_venda -> busca($_GET["busca"]);	    
-} else {
-    $registros = $pedido_venda -> listaOrdemDesc();
-}
+$itens_controller = new ItensVendaController();
+$itens = new itens_venda();
+
+$produto_controller = new ProdutoController();
+$produto = new produto ();
 
 $functions = new Functions;
 
 $id = ( isset($_GET['id'])) ? $_GET['id'] : 0;
 
 if ($id > 0) {
-	$load = $cliente->remove($id, 'id');
-	header('Location: lista.php?acao=3&tipo=1');
+	$pedido_venda = $pedido_controller->loadObject($id, 'id');
+	$cliente = $cliente_controller->loadObject($pedido_venda->getClienteId(), 'id');
+	$registros = $itens_controller->listObjects("pedido_venda_id = " . $pedido_venda->getId());
 }
 ?>
 <!DOCTYPE html>
@@ -87,85 +94,56 @@ if ($id > 0) {
     <div class="container">
 
 		<!-- Título -->
-        <blockquote>
-          <h2>Pedidos</h2>
-        </blockquote>
-
-
-        <!-- Mensagem de Retorno -->
-        <?php
-        if(!empty($_GET["tipo"])){
-		?>
-		<section id="aviso">
-        <?php
-		$functions -> mensagemDeRetorno($_GET["tipo"], $_GET["acao"]);
-		?>
-        </section> 
-		<?php
-		}
-        ?>
-
-
-
-<hr>
-
-
-        <form class="form-search" id="busca" action="lista.php" method="get">            
-            <input type="text" placeholder="Digite o nome do Cliente" class="input-xxlarge" id="busca" name="busca">
-            <input type="submit" class="btn" value="Buscar">
         
-        </form>
-		
-		<?php         
-        if($registros){
-        if(mysql_num_rows($registros) > 0){        	
-		?>
-        <!-- Lista -->
-        <table class="table table-hover">
-			<thead>
-            	<tr>
-                    <th>N° Pedido</th>
-                    <th>Nome</th>                    
-                    <th style="text-align:center">Data - Hora</th>
-                    <th style="text-align:center">Forma de Pgto</th>
-                    <th style="text-align:center">Status Pagamento</th>
-                    <th style="text-align:center">Data de Pagamento</th>
-                    <th style="text-align:center">Obs</th>
-                    <th style="text-align:center"><i class="icon-remove"></i></th>
-                </tr>
-            </thead>
-                
-            <tbody>
-            
-				<?php
-                	while($reg = mysql_fetch_array($registros)){
-                		$status_pagamento = 'Pago';
-                		if ($reg['status_pagamento'] == "1"){
-                			$status_pagamento = 'Aberto';							
-                		}  
-						
-						$cliente = $cliente_controller->loadObject($reg['cliente_id'], 'id');          				
-                			
-                		
-				?>
-            
-            	<tr>
-                    <td><?php echo $reg["id"]; ?></td>
-                    <td><?php echo $cliente->getNome(); ?></td>
-					<td style="text-align:center"><?php echo $functions -> converterDataHoraPadrao($reg["data"]); ?></td>
-					<td style="text-align:center"><?php echo $reg["forma_pagamento"]; ?></td>
-                    <td style="text-align:center"><?php echo $status_pagamento ?></td>
-                    <td style="text-align:center"><?php echo substr($functions -> converterDataHoraPadrao($reg["data_pagamento"]), 0, -11); ?></td>
-                    <td style="text-align:center"><?php echo $reg["obs"]; ?></td>
-                    <td style="text-align:center"><a class="btn btn-small" type="button" onClick="return confirm('Deseja excluir mesmo o Cliente?')" href="lista.php?id=<?php echo $reg["id"]; ?>"><i class="icon-remove"></i></a></td>
-                </tr>
-            
-            	<?php
-				}
-				?>
-            
-            </tbody>
+          <h2>Pedido Nº <?php echo $pedido_venda->getId() ?></h2>  
+          	<h4><?php if ($pedido_venda->getStatusPagamento() == 1 ){
+				echo "<div class='alert alert-block'>Status: ABERTO - "  . "Data Vencimento:" . substr($functions -> converterDataHoraPadrao($pedido_venda->getDataPagamento()), 0, -11) . "</div>" ;          		
+          	} else if ($pedido_venda->getStatusPagamento() == 2 ){
+          		echo "<div class='alert alert-error'>Status: VENCIDO - " . "Data Vencimento:" . substr($functions -> converterDataHoraPadrao($pedido_venda->getDataPagamento()), 0, -11) . "</div>" ; 
+          	} else {
+          		echo "<div class='alert alert-success'>Status: PAGO - " . "Data Pagamento:" . substr($functions -> converterDataHoraPadrao($pedido_venda->getDataPagamento()), 0, -11) . "</div>" ;
+          	}
+ 			?>  </h4>
+       
+	
+	
+		<table border="0" class="table-condensed">
+			<tr><td colspan="3"><?php  echo "Data: " . $functions -> converterDataHoraPadrao($pedido_venda->getData()); ?></td></tr>
+			<tr><td colspan="3">Cliente: <big><?php echo $cliente->getNome() ?></big></td></tr>
+			<tr><td>CPF: <?php echo $cliente->getCpf() ?></td><td colspan="2">RG: <?php echo $cliente->getRg() ?></td></tr>
+			<tr><td>Endereço: <?php echo $cliente->getEndereco() ?></td><td>Bairro: <?php echo $cliente->getBairro() ?></td><td>Cidade: <?php echo $cliente->getCidade() . ' - ' . $cliente->getUf()  ?></td></tr>
+			
 		</table>
+		</br>
+		<table border="1" class="table-condensed">
+			<tr><th>Cód.</th><th>Cód. Barras</th><th>Descrição Produto</th><th>Valor Unit. R$</th><th>Quantidade</th><th>Total R$</th></tr>
+			<?php         
+		        if($registros){
+		        if(mysql_num_rows($registros) > 0){
+		        	while($reg = mysql_fetch_array($registros)){
+		        		$produto = $produto_controller->loadObject($reg['produto_id'], 'id');	
+
+				?>
+				
+			<tr><td><?php echo $produto->getId(); ?></td>
+				<td><?php echo $produto->getCodigoBarras(); ?></td>
+				<td><?php echo $produto->getDescricao(); ?></td>
+				<td><?php echo 'R$ '. $reg["valor"]; ?></td>
+				<td><?php echo $reg["quantidade"]; ?></td>
+				<td><?php echo 'R$ '. $reg['quantidade'] * $reg['valor']; ?></td>
+				
+			</tr>
+			<?php } ?>
+			<tr style="background-color: #EEE"><td>Desconto:</td>
+				<td colspan="2">R$ <?php echo $pedido_venda->getDesconto(); ?></td>
+				<td>Total:</td>
+				<td colspan="2"><strong>R$ <?php echo $pedido_venda->getValorTotal(); ?></strong></td></tr>
+			
+		</table>
+		
+		
+        <!-- Lista -->
+       
         
       	<?php
 		}else{

@@ -11,6 +11,7 @@ error_reporting(E_ALL);
  * 	@data de criação - 12/04/2014
  * 	@arquivo  - lista.php - 
  */
+require ("../../view/usuario/verifica.php");
 
 require_once ("../../controller/produto.controller.class.php");
 require_once ("../../model/produto.class.php");

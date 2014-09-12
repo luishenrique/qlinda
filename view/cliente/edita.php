@@ -13,6 +13,7 @@ error_reporting(E_ALL);
 
 require_once ("../../controller/cliente.controller.class.php");
 require_once ("../../model/cliente.class.php");
+require ("../../view/usuario/verifica.php");
 
 include_once ("../../functions/functions.class.php");
 

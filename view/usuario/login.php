@@ -20,7 +20,7 @@ if (isset($_POST["login"]) || isset($_POST["senha"])) {
 		//Declara as variáveis de sessão que serão utilizadas no sistema
 		session_start();
 		$_SESSION["usuario_id"] = $usuario["id"];
-		$_SESSION["usuario_nome"] = $usuario["login"];
+		$_SESSION["usuario_login"] = $usuario["login"];
 
 		//Sucesso, redireciona para a tela principal
 		header("Location: home.php");

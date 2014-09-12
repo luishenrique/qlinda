@@ -11,6 +11,7 @@ error_reporting(E_ALL);
  * 	@arquivo  - salvar_pedido.php
  */
 
+ 
 require_once ("../../controller/pedido_venda.controller.class.php");
 require_once ("../../model/pedido_venda.class.php");
 
@@ -85,5 +86,7 @@ for ($i=1; $i<=$qtdeProdutos; $i++){
 		}
 	}
 }
+
+echo $itensVenda->getPedidoVendaId();
 
 ?>

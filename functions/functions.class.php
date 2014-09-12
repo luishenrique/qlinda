@@ -116,11 +116,12 @@ class Functions {
 							  <li><a href=\"" . $contextoDeMenu . "/view/categoria/edita.php\"><i class=\"icon-share\"></i> Cadastrar Categoria</a></li>
 							  <li><a href=\"" . $contextoDeMenu . "/view/produto/lista.php\"><i class=\"icon-user\"></i> Lista de Produtos</a></li>
 							  <li><a href=\"" . $contextoDeMenu . "/view/produto/edita.php\"><i class=\"icon-share\"></i> Cadastrar Novo</a></li>							  
-							</ul>
+							</ul>							
 						  </li>
 						  
 						  
 						   <li><a href=\"" . $contextoDeMenu . "/view/usuario/sobre.php\">Sobre</a></li>
+						   <li><a href=\"" . $contextoDeMenu . "/view/usuario/logoff.php?confirma=NAO\"><i class=\"icon-share\"></i> Sair</a></li>
 						</ul>				
 						";
 

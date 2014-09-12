@@ -11,12 +11,13 @@ error_reporting(E_ALL);
  * 	@arquivo  - novo.php
  */
 
+
 require_once ("../../controller/usuario.controller.class.php");
 require_once ("../../model/usuario.class.php");
 
 include_once ("../../functions/functions.class.php");
 
-session_start();
+require ("../../view/usuario/verifica.php");
 
 $usuario_controller = new UsuarioController();
 $usuario = new usuario();
@@ -175,10 +176,9 @@ if (isset($_POST['submit'])) {
 						<td align="right">
 						<div class="input-prepend alert-danger" style="padding: 5px;">
 							<span class="add-on" style="padding: 10px; width: 100px">TOTAL R$</span>
-							<input class="input-medium" readonly="readonly" type="text" name="somartudo"  value="0" id="somartudo" style="font-size: 20px; padding: 10px; readonly="readonly"></td></tr></table>
-							</div>
+							<input class="input-medium" readonly="readonly" type="text" name="somartudo"  value="0" id="somartudo" style="font-size: 20px; padding: 10px; readonly="readonly"></td></tr></table>					</div>
 									</div>
-		<div class="modal hide fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="!display: none" aria-hidden="true">
+									<div class="modal hide fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="!display: none" aria-hidden="true">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
 					×
@@ -255,7 +255,7 @@ if (isset($_POST['submit'])) {
 						},
 						success : function(data) {
 							$(".status").css({display:"none"});  
-							$(window.document.location).attr('href','lista.php');
+							$(window.document.location).attr('href','visualizar.php?id=' + data );
 							
 						},
 						error : function() {
@@ -311,7 +311,7 @@ if (isset($_POST['submit'])) {
 							$("#produto_quantidade" + idcampo).val(1);
 							calculaTotal();
 						} else {
-							$("#produto_id" + idcampo).val(data.id	);
+							$("#produto_id" + idcampo).val(data.id);
 							$("#produto_descricao" + idcampo).val(data.descricao);
 							$("#produto_valor" + idcampo).val(data.valor_venda);
 							$("#produto_valortotal" + idcampo).val(data.valor_venda);

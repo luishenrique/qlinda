@@ -14,6 +14,7 @@ error_reporting(E_ALL);
 
 require_once ("../../controller/categoria.controller.class.php");
 require_once ("../../model/categoria.class.php");
+require ("../../view/usuario/verifica.php");
 
 include_once ("../../functions/functions.class.php");
 

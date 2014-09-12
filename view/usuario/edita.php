@@ -16,7 +16,7 @@ require_once("../../model/usuario.class.php");
 
 include_once("../../functions/functions.class.php");
 
-session_start();
+require ("../../view/usuario/verifica.php");
 
 $controller = new UsuarioController();
 $usuario = new usuario();

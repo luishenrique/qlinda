@@ -10,6 +10,8 @@ error_reporting(E_ALL);
  * 	@data de criação - 18/04/2014
  * 	@arquivo  - edita.php
  */
+require ("../../view/usuario/verifica.php");
+
 
 require_once ("../../controller/produto.controller.class.php");
 require_once ("../../model/produto.class.php");

@@ -29,6 +29,8 @@ class PedidoVendaController extends Crud {
 	public function listaOrdemDesc(){		
 		 return $this->execute_query("SELECT * FROM pedido_venda ORDER BY id desc" );
 	}
+	
+	
 }
 
 ?>
