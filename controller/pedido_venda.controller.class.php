@@ -29,6 +29,17 @@ class PedidoVendaController extends Crud {
 	public function listaOrdemDesc(){		
 		 return $this->execute_query("SELECT * FROM pedido_venda ORDER BY id desc" );
 	}
+
+	public function busca($nome){		
+		$pedidos = 0;
+		$registros = $this->execute_query("SELECT * FROM " . "cliente WHERE nome LIKE '%" . $nome . "%' ;" );
+		if(mysql_num_rows($registros) > 0){
+			while($reg = mysql_fetch_array($registros)){
+				$pedidos = $this->execute_query("SELECT * FROM " . $this->getTabela() .  " WHERE cliente_id = " . $reg['id'] . ";" );				
+			}
+		}
+		return $pedidos;
+	}
 	
 	
 }

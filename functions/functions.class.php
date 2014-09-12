@@ -87,6 +87,7 @@ class Functions {
 							<a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">Vendas<b class=\"caret\"></b></a>
 							<ul class=\"dropdown-menu\">
 							  <li><a href=\"" . $contextoDeMenu . "/view/vendas/novo.php\"><i class=\"icon-user\"></i> Nova Venda</a></li>
+							  <li><a href=\"" . $contextoDeMenu . "/view/vendas/lista.php\"><i class=\"icon-user\"></i> Lista de Pedidos</a></li>
 							  
 							</ul>
 						  </li>

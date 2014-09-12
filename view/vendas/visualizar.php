@@ -47,6 +47,8 @@ if ($id > 0) {
 	$pedido_venda = $pedido_controller->loadObject($id, 'id');
 	$cliente = $cliente_controller->loadObject($pedido_venda->getClienteId(), 'id');
 	$registros = $itens_controller->listObjects("pedido_venda_id = " . $pedido_venda->getId());
+} else {
+	die("Nenhum pedido selecionado");
 }
 ?>
 <!DOCTYPE html>
@@ -95,9 +97,13 @@ if ($id > 0) {
 
 		<!-- Título -->
         
-          <h2>Pedido Nº <?php echo $pedido_venda->getId() ?></h2>  
+          <h2>Pedido Nº <?php echo $pedido_venda->getId() ?>    
+			<?php if ($pedido_venda->getStatusPagamento() > 0 ){
+			?>	
+          <a href="baixa.php?id=<?php echo $pedido_venda->getId();?>" class="btn btn-success btn-large">Efetuar baixa</a><?php } ?>	</h2>   
+
           	<h4><?php if ($pedido_venda->getStatusPagamento() == 1 ){
-				echo "<div class='alert alert-block'>Status: ABERTO - "  . "Data Vencimento:" . substr($functions -> converterDataHoraPadrao($pedido_venda->getDataPagamento()), 0, -11) . "</div>" ;          		
+				echo "<div class='alert alert-block'>Status: ABERTO - "  . "Data Vencimento:" . substr($functions -> converterDataHoraPadrao($pedido_venda->getDataPagamento()), 0, -11) . "</div> ";          		
           	} else if ($pedido_venda->getStatusPagamento() == 2 ){
           		echo "<div class='alert alert-error'>Status: VENCIDO - " . "Data Vencimento:" . substr($functions -> converterDataHoraPadrao($pedido_venda->getDataPagamento()), 0, -11) . "</div>" ; 
           	} else {
@@ -134,6 +140,8 @@ if ($id > 0) {
 				
 			</tr>
 			<?php } ?>
+
+			<tr><td colspan="6">Obs: <?php echo $pedido_venda->getObs(); ?></td></tr>
 			<tr style="background-color: #EEE"><td>Desconto:</td>
 				<td colspan="2">R$ <?php echo $pedido_venda->getDesconto(); ?></td>
 				<td>Total:</td>
@@ -141,29 +149,15 @@ if ($id > 0) {
 			
 		</table>
 		
-		
-        <!-- Lista -->
-       
-        
       	<?php
-		}else{
-		?>
-        	<div class="text-center">
-                <h2>Ops.. =(</h2>
-                <p>Sua pesquisa não retornou nenhum resultado válido.</p>
-            </div>
-        
-        <?php
-		}} else {
-            echo "Nenhum Cliente cadastrado";
-        }   
+			}};
 		?>
 
       <hr>
 
         <div class="control-group">
             <div class="controls">
-              <a href="edita.php" class="btn btn-success btn-large">Cadastrar um novo Cliente</a>
+              <a href="lista.php" class="btn btn btn-large">Voltar aos Pedidos</a>
             </div>
         </div>
 

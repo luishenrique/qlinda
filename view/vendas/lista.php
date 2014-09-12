@@ -130,8 +130,8 @@ if ($id > 0) {
                     <th style="text-align:center">Forma de Pgto</th>
                     <th style="text-align:center">Status Pagamento</th>
                     <th style="text-align:center">Data de Pagamento</th>
-                    <th style="text-align:center">Obs</th>
-                    <th style="text-align:center"><i class="icon-remove"></i></th>
+                     <th style="text-align:center"><i class="icon-remove"></i></th>
+                    <th style="text-align:center"><i class="icon-eye-open"></i></th>
                 </tr>
             </thead>
                 
@@ -139,10 +139,13 @@ if ($id > 0) {
             
 				<?php
                 	while($reg = mysql_fetch_array($registros)){
-                		$status_pagamento = 'Pago';
-                		if ($reg['status_pagamento'] == "1"){
-                			$status_pagamento = 'Aberto';							
+                		$status_pagamento = 'Aberto';
+                		if ($reg['status_pagamento'] == "4"){
+                			$status_pagamento = 'Pago';							
                 		}  
+                        if ($reg['status_pagamento'] == "2"){
+                            $status_pagamento = 'Vencido';                         
+                        } 
 						
 						$cliente = $cliente_controller->loadObject($reg['cliente_id'], 'id');          				
                 			
@@ -157,7 +160,7 @@ if ($id > 0) {
                     <td style="text-align:center"><?php echo $status_pagamento ?></td>
                     <td style="text-align:center"><?php echo substr($functions -> converterDataHoraPadrao($reg["data_pagamento"]), 0, -11); ?></td>
                     <td style="text-align:center"><?php echo $reg["obs"]; ?></td>
-                    <td style="text-align:center"><a class="btn btn-small" type="button" onClick="return confirm('Deseja excluir mesmo o Cliente?')" href="lista.php?id=<?php echo $reg["id"]; ?>"><i class="icon-remove"></i></a></td>
+                    <td style="text-align:center"><a class="btn btn-small" type="button"  href="visualizar.php?id=<?php echo $reg["id"]; ?>"><i class="icon-eye-open"></i></a></td>
                 </tr>
             
             	<?php
@@ -177,7 +180,7 @@ if ($id > 0) {
         
         <?php
 		}} else {
-            echo "Nenhum Cliente cadastrado";
+            echo "Nenhum Pedido encontrado, tente buscar apenas pelo primeiro nome ou sobrenome!";
         }   
 		?>
 

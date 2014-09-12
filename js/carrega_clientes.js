@@ -20,7 +20,7 @@ function buscaCliente() {
 	document.getElementById('lista_cliente').innerHTML = "Aguarde, pesquisando...!!!";
 	busca = document.getElementById('busca').value;
 	
-	xmlhttp.open("POST", "busca.php?busca=" + escape(busca), true);
+	xmlhttp.open("POST", "busca_clientes.php?busca=" + escape(busca), true);
 	xmlhttp.setRequestHeader('Content-Type', 'text/html');
 	xmlhttp.setRequestHeader('encoding', 'utf-8');
 	xmlhttp.setRequestHeader('Content-Type',

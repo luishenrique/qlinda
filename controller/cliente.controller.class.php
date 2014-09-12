@@ -24,7 +24,7 @@ class ClienteController extends Crud {
     	return $value==$selected ? ' selected="selected"' : '';	
 	}	
 
-	public function busca($nome){		
+	public function busca($nome){
 		return $this->execute_query("SELECT * FROM " . $this->getTabela() .  " WHERE nome LIKE '%" . $nome . "%' ;" );
 	}
 }

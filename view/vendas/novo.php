@@ -105,7 +105,7 @@ if (isset($_POST['submit'])) {
 					<div class="controls" style="background: #FFF;">
 						<table class="table table-striped" id="pedido" name="pedido" style="background-color: #EEE">
 							<tr>
-								<td width="150px">Código</td>
+								<td width="150px">Código B.</td>								
 								<td width="300px">Produto</td>
 								<td width="30px">Quantidade</td>
 								<td width="90px" style="text-align:center">Valor Unit.</td>
@@ -116,8 +116,8 @@ if (isset($_POST['submit'])) {
 							<tr>
 
 								<td>
-								<input class="input-block-level" type="text" name="produto_cod1" onkeypress="procurarProduto(this.id, this.value, event);" id="produto_cod1" value="">
-								<input class="input-block-level" type="hidden" name="produto_id1" onkeypress="procurarProduto(this.id, this.value, event);" id="produto_id1" value="">
+								<input class="input-block-level" type="text" name="produto_codigo_barras1" onkeypress="procurarProduto(this.id, this.value, event);" id="produto_codigo_barras1" value="">
+								<input class="input-block-level" type="hidden" name="produto_id1" id="produto_id1" value="">
 								</td>
 								<td>
 								<input class="input-block-level" type="text" name="produto_descricao1"  id="produto_descricao1" readonly="readonly">
@@ -176,7 +176,8 @@ if (isset($_POST['submit'])) {
 						<td align="right">
 						<div class="input-prepend alert-danger" style="padding: 5px;">
 							<span class="add-on" style="padding: 10px; width: 100px">TOTAL R$</span>
-							<input class="input-medium" readonly="readonly" type="text" name="somartudo"  value="0" id="somartudo" style="font-size: 20px; padding: 10px; readonly="readonly"></td></tr></table>					</div>
+							<input class="input-medium" readonly="readonly" type="text" name="somartudo"  value="0" id="somartudo" style="font-size: 20px; padding: 10px;"></td></tr></table>
+							</div>
 									</div>
 									<div class="modal hide fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="!display: none" aria-hidden="true">
 			<div class="modal-header">
@@ -305,6 +306,7 @@ if (isset($_POST['submit'])) {
 						if (data.id === undefined) {
 							alert('Código inválido');
 							$("#produto_id" + idcampo).val(data.id);
+							$("#produto_codigo_barras" + idcampo).val(data.codigo_barras);
 							$("#produto_descricao" + idcampo).val(data.descricao);
 							$("#produto_valor" + idcampo).val(data.valor_venda);
 							$("#produto_valortotal" + idcampo).val(data.valor_venda);
@@ -312,6 +314,7 @@ if (isset($_POST['submit'])) {
 							calculaTotal();
 						} else {
 							$("#produto_id" + idcampo).val(data.id);
+							$("#produto_codigo_barras" + idcampo).val(data.codigo_barras);
 							$("#produto_descricao" + idcampo).val(data.descricao);
 							$("#produto_valor" + idcampo).val(data.valor_venda);
 							$("#produto_valortotal" + idcampo).val(data.valor_venda);
@@ -351,8 +354,9 @@ if (isset($_POST['submit'])) {
 			});
 
 			function addlinha() {
-				linha++;
-				var texto = "<tr><td><input class=\"input-block-level\" type=\"text\" name=\"produto_id" + linha + "\"id=\"produto_id" + linha + "\"  onkeypress=\"procurarProduto(this.id, this.value, event);\" value=\"\"></td><td><input class=\"input-block-level\" type=\"text\" name=\"produto_descricao"+ linha +"\" id=\"produto_descricao" + linha + "\"readonly=\"readonly\"></td><td><select class=\"input-block-level\" id=\"produto_quantidade" + linha + "\" name=\"produto_quantidade" + linha + "\" onchange=\"atualizarTotal(this.value, this.id);\"><option value=\"1\" selected=\"selected\">1</option><option value=\"2\">2</option><option value=\"3\">3</option><option value=\"4\">4</option><option value=\"5\">5</option><option value=\"6\">6</option><option value=\"7\">7</option><option value=\"8\">8</option><option value=\"9\">9</option><option value=\"10\">10</option></select></td><td><div class=\"input-prepend\"> <span class=\"add-on\">R$</span><input class=\"input-mini\" type=\"text\" name=\"produto_valor" + linha + "\" id=\"produto_valor" + linha + "\" readonly=\"readonly\"></td></div><td><div class=\"input-prepend\"><span class=\"add-on\">R$</span><input class=\"input-medium\" type=\"text\" name=\"produto_valortotal" + linha + "\"  id=\"produto_valortotal" + linha + "\" readonly=\"readonly\"></td></div><td style=\"text-align:center\"><a class=\"btn btn-medium btn-danger\" onclick=\"removerLinha(this);\"><i class=\"icon-remove\"></i></a></td></tr>";
+				linha++;	
+				var texto = "<tr><td><input class=\"input-block-level\" type=\"text\" name=\"produto_codigo_barras" + linha + "\" onkeypress=\"procurarProduto(this.id, this.value, event);\" id=\"produto_codigo_barras" + linha +"\" value=\"\"><input class=\"input-block-level\" type=\"hidden\" name=\"produto_id" + linha + "\" id=\"produto_id" + linha + "\" value=\"\"></td><td><input class=\"input-block-level\" type=\"text\" name=\"produto_descricao"+ linha 
+				+ "\" id=\"produto_descricao" + linha + "\"readonly=\"readonly\"></td><td><select class=\"input-block-level\" id=\"produto_quantidade" + linha + "\" name=\"produto_quantidade" + linha + "\" onchange=\"atualizarTotal(this.value, this.id);\"><option value=\"1\" selected=\"selected\">1</option><option value=\"2\">2</option><option value=\"3\">3</option><option value=\"4\">4</option><option value=\"5\">5</option><option value=\"6\">6</option><option value=\"7\">7</option><option value=\"8\">8</option><option value=\"9\">9</option><option value=\"10\">10</option></select></td><td><div class=\"input-prepend\"> <span class=\"add-on\">R$</span><input class=\"input-mini\" type=\"text\" name=\"produto_valor" + linha + "\" id=\"produto_valor" + linha + "\" readonly=\"readonly\"></td></div><td><div class=\"input-prepend\"><span class=\"add-on\">R$</span><input class=\"input-medium\" type=\"text\" name=\"produto_valortotal" + linha + "\"  id=\"produto_valortotal" + linha + "\" readonly=\"readonly\"></td></div><td style=\"text-align:center\"><a class=\"btn btn-medium btn-danger\" onclick=\"removerLinha(this);\"><i class=\"icon-remove\"></i></a></td></tr>";
 				$("#pedido").append(texto);
 				$("#produtos").val(linha);
 				

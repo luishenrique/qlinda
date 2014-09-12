@@ -8,21 +8,45 @@ error_reporting(E_ALL);
 /*
  * 	Descrição do Arquivo
  * 	@author - Luis Henrique Rodrigues
- * 	@data de criação - 30/10/2013
- * 	@arquivo  - logoff.php
+ * 	@data de criação - 12/09/2014
+ * 	@arquivo  - baixa.php
  */
 
+require_once ("../../controller/pedido_venda.controller.class.php");
+require_once ("../../model/pedido_venda.class.php");
+
+require_once ("../../controller/cliente.controller.class.php");
+require_once ("../../model/cliente.class.php");
+
 include_once("../../functions/functions.class.php");
-$functions	= new Functions;
-session_start();
 
-if($_GET["confirma"]=="SIM"){
+require ("../../view/usuario/verifica.php");
 
-	require_once("../../controller/usuario.controller.class.php");
-	$login 	= new UsuarioController;
+$pedido_controller = new PedidoVendaController();
+$pedido_venda = new pedido_venda();
 
-	$login->logoff();
-	
+$cliente_controller = new ClienteController();
+$cliente = new cliente();
+
+$functions = new Functions;
+
+$id = ( isset($_GET['id'])) ? $_GET['id'] : 0;
+
+if(isset($_GET['resposta']) == 'SIM') {
+  $pedido_venda = $pedido_controller->loadObject($id, 'id');    
+  $pedido_venda->setStatusPagamento(4);  
+  $data = date('Y-m-d H:i:s');
+  $pedido_venda->setDataPagamento($data);
+  $pedido_controller->update($pedido_venda, 'id');  
+  header('Location: visualizar.php?id=' . $pedido_venda->getId());
+     
+}
+
+if ($id > 0) {
+  $pedido_venda = $pedido_controller->loadObject($id, 'id');
+  $cliente = $cliente_controller->loadObject($pedido_venda->getClienteId(), 'id');  
+} else {
+  die("Nenhum pedido selecionado");
 }
 
 ?>
@@ -73,30 +97,53 @@ if($_GET["confirma"]=="SIM"){
 
 		<!-- Título -->
         <blockquote>
-          <h2>Logoff</h2>
+          <h2>Efetuar baixa em conta</h2>
           <small>Escolha a opção desejada clicando nos botões abaixo</small>
         </blockquote>
         
 		<hr>
         
 		<div class="text-center">
-			<h2>Efetuar Logoff</h2>
-			<p>Deseja confirmar sua saída do sistema Q'Linda!?</p>
-		</div>
-        
-        <p>&nbsp;</p>
-        
-        <div class="control-group">
-            <div class="controls" style="text-align:center">
-              <a href="logoff.php?confirma=SIM" class="btn btn-success btn-large">Sim, desejo sair do sistema</a>&nbsp;&nbsp;
-              <a href="../usuario/home.php" class="btn btn btn-large">Não desejo sair do sistema</a>
-            </div>
-		</div>
+			
 
+
+			
+      <h2>Pedido Nº <?php echo $pedido_venda->getId() ?>   |    Valor: R$ <?php echo $pedido_venda->getValorTotal(); ?></h2>
+      <div class="text-left">
+        <table border="2" width="100%">
+      <tr><td colspan="3"><?php  echo "Data: " . $functions -> converterDataHoraPadrao($pedido_venda->getData()); ?></td></tr>
+      <tr><td colspan="3">Cliente: <big><?php echo $cliente->getNome() ?></big></td></tr>
+      <tr><td>CPF: <?php echo $cliente->getCpf() ?></td><td colspan="2">RG: <?php echo $cliente->getRg() ?></td></tr>
+      <tr><td>Endereço: <?php echo $cliente->getEndereco() ?></td><td>Bairro: <?php echo $cliente->getBairro() ?></td><td>Cidade: <?php echo $cliente->getCidade() . ' - ' . $cliente->getUf()  ?></td></tr>
+      
+    </table>
+
+    <p>&nbsp;</p>
+        
+        <div class="text-center alert" >
+        <p>Tem certeza que deseja dar baixa no Pedido acima?</p>          
+        <div class="control-group">
+
+      
+            <div class="controls" style="text-align:center">                                          
+              <a href="baixa.php?id=<?php echo $pedido_venda->getId();?>&resposta=SIM" class="btn btn-success btn-large">Sim </a>&nbsp;&nbsp;
+              <a href="../usuario/home.php" class="btn btn btn-large">Não </a>
+            </div>
+      
+    </div>
+
+</div>
+
+  </div>
+    </div>
+
+		</div>
+        
+        
 		<hr>
 
       <footer>
-        <p>&copy; Company 2013</p>
+        <p>&copy; Company 2014</p>
       </footer>
 
     </div> 
@@ -119,32 +166,6 @@ if($_GET["confirma"]=="SIM"){
         <script src="../../js/bootstrap-typeahead.js"></script>
     
 
-		<script>
-        $(document).ready(function(){
-         
-         $('#contact-form').validate(
-         {
-          rules: {
-            login: {
-              minlength: 2,
-              required: true
-            },
-            senha: {
-              required: true,
-              email: true
-            }
-          },
-          highlight: function(element) {
-            $(element).closest('.control-group').removeClass('success').addClass('error');
-          },
-          success: function(element) {
-            element
-            .text('OK!').addClass('valid')
-            .closest('.control-group').removeClass('error').addClass('success');
-          }
-         });
-        });
-        </script>
 
 
 	</body>

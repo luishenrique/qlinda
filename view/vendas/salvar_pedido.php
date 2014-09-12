@@ -50,7 +50,7 @@ if ($pedidoVenda->getFormaPagamento() == 'aprazo'){
 	$pedidoVenda->setStatusPagamento(1);	
 } else {
 	$pedidoVenda->setDataPagamento($data);
-	$pedidoVenda->setStatusPagamento(0);
+	$pedidoVenda->setStatusPagamento(4);
 }
 
 $controllerPedidoVenda->save($pedidoVenda);

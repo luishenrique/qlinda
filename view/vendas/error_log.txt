@@ -166,3 +166,117 @@
 [10-Sep-2014 14:44:31 UTC] PHP Notice:  Undefined variable: registros in D:\Servidor\htdocs\qlinda\view\vendas\visualizar.php on line 112
 [10-Sep-2014 14:44:47 UTC] PHP Notice:  Undefined variable: registros in D:\Servidor\htdocs\qlinda\view\vendas\visualizar.php on line 112
 [10-Sep-2014 14:46:36 UTC] PHP Notice:  Undefined variable: registros in D:\Servidor\htdocs\qlinda\view\vendas\visualizar.php on line 112
+[12-Sep-2014 16:29:59 UTC] PHP Notice:  Undefined offset: 1 in C:\wamp\www\qlinda\functions\functions.class.php on line 20
+[12-Sep-2014 16:29:59 UTC] PHP Stack trace:
+[12-Sep-2014 16:29:59 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\vendas\visualizar.php:0
+[12-Sep-2014 16:29:59 UTC] PHP   2. Functions->converterDataHoraPadrao() C:\wamp\www\qlinda\view\vendas\visualizar.php:104
+[12-Sep-2014 16:29:59 UTC] PHP Notice:  Undefined offset: 1 in C:\wamp\www\qlinda\functions\functions.class.php on line 20
+[12-Sep-2014 16:29:59 UTC] PHP Stack trace:
+[12-Sep-2014 16:29:59 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\vendas\visualizar.php:0
+[12-Sep-2014 16:29:59 UTC] PHP   2. Functions->converterDataHoraPadrao() C:\wamp\www\qlinda\view\vendas\visualizar.php:111
+[12-Sep-2014 16:29:59 UTC] PHP Notice:  Undefined variable: registros in C:\wamp\www\qlinda\view\vendas\visualizar.php on line 121
+[12-Sep-2014 16:29:59 UTC] PHP Stack trace:
+[12-Sep-2014 16:29:59 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\vendas\visualizar.php:0
+[12-Sep-2014 16:37:16 UTC] PHP Notice:  Undefined offset: 1 in C:\wamp\www\qlinda\functions\functions.class.php on line 20
+[12-Sep-2014 16:37:16 UTC] PHP Stack trace:
+[12-Sep-2014 16:37:16 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\vendas\visualizar.php:0
+[12-Sep-2014 16:37:16 UTC] PHP   2. Functions->converterDataHoraPadrao() C:\wamp\www\qlinda\view\vendas\visualizar.php:104
+[12-Sep-2014 16:37:16 UTC] PHP Notice:  Undefined offset: 1 in C:\wamp\www\qlinda\functions\functions.class.php on line 20
+[12-Sep-2014 16:37:16 UTC] PHP Stack trace:
+[12-Sep-2014 16:37:16 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\vendas\visualizar.php:0
+[12-Sep-2014 16:37:16 UTC] PHP   2. Functions->converterDataHoraPadrao() C:\wamp\www\qlinda\view\vendas\visualizar.php:111
+[12-Sep-2014 16:37:16 UTC] PHP Notice:  Undefined variable: registros in C:\wamp\www\qlinda\view\vendas\visualizar.php on line 121
+[12-Sep-2014 16:37:16 UTC] PHP Stack trace:
+[12-Sep-2014 16:37:16 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\vendas\visualizar.php:0
+[12-Sep-2014 16:38:47 UTC] PHP Notice:  Undefined offset: 1 in C:\wamp\www\qlinda\functions\functions.class.php on line 20
+[12-Sep-2014 16:38:47 UTC] PHP Stack trace:
+[12-Sep-2014 16:38:47 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\vendas\visualizar.php:0
+[12-Sep-2014 16:38:47 UTC] PHP   2. Functions->converterDataHoraPadrao() C:\wamp\www\qlinda\view\vendas\visualizar.php:104
+[12-Sep-2014 16:38:47 UTC] PHP Notice:  Undefined offset: 1 in C:\wamp\www\qlinda\functions\functions.class.php on line 20
+[12-Sep-2014 16:38:47 UTC] PHP Stack trace:
+[12-Sep-2014 16:38:47 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\vendas\visualizar.php:0
+[12-Sep-2014 16:38:47 UTC] PHP   2. Functions->converterDataHoraPadrao() C:\wamp\www\qlinda\view\vendas\visualizar.php:111
+[12-Sep-2014 16:38:47 UTC] PHP Notice:  Undefined variable: registros in C:\wamp\www\qlinda\view\vendas\visualizar.php on line 121
+[12-Sep-2014 16:38:47 UTC] PHP Stack trace:
+[12-Sep-2014 16:38:47 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\vendas\visualizar.php:0
+[12-Sep-2014 16:48:12 UTC] PHP Fatal error:  Call to undefined method PedidoVendaController::busca() in C:\wamp\www\qlinda\view\vendas\lista.php on line 31
+[12-Sep-2014 16:48:12 UTC] PHP Stack trace:
+[12-Sep-2014 16:48:12 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\vendas\lista.php:0
+[12-Sep-2014 17:34:14 UTC] PHP Fatal error:  Class 'PedidoVendaController' not found in C:\wamp\www\qlinda\view\vendas\baixa.php on line 17
+[12-Sep-2014 17:34:14 UTC] PHP Stack trace:
+[12-Sep-2014 17:34:14 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\vendas\baixa.php:0
+[12-Sep-2014 17:34:41 UTC] PHP Notice:  Undefined variable: cliente_controller in C:\wamp\www\qlinda\view\vendas\baixa.php on line 25
+[12-Sep-2014 17:34:41 UTC] PHP Stack trace:
+[12-Sep-2014 17:34:41 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\vendas\baixa.php:0
+[12-Sep-2014 17:34:41 UTC] PHP Fatal error:  Call to a member function loadObject() on a non-object in C:\wamp\www\qlinda\view\vendas\baixa.php on line 25
+[12-Sep-2014 17:34:41 UTC] PHP Stack trace:
+[12-Sep-2014 17:34:41 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\vendas\baixa.php:0
+[12-Sep-2014 17:35:11 UTC] PHP Notice:  Undefined variable: functions in C:\wamp\www\qlinda\view\vendas\baixa.php on line 70
+[12-Sep-2014 17:35:11 UTC] PHP Stack trace:
+[12-Sep-2014 17:35:11 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\vendas\baixa.php:0
+[12-Sep-2014 17:35:11 UTC] PHP Fatal error:  Call to a member function geraMenu() on a non-object in C:\wamp\www\qlinda\view\vendas\baixa.php on line 70
+[12-Sep-2014 17:35:11 UTC] PHP Stack trace:
+[12-Sep-2014 17:35:11 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\vendas\baixa.php:0
+[12-Sep-2014 18:28:49 UTC] PHP Fatal error:  Call to undefined method cliente::remove() in C:\wamp\www\qlinda\view\vendas\lista.php on line 41
+[12-Sep-2014 18:28:49 UTC] PHP Stack trace:
+[12-Sep-2014 18:28:49 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\vendas\lista.php:0
+[12-Sep-2014 18:38:07 UTC] PHP Notice:  Undefined variable: pedidoVenda in C:\wamp\www\qlinda\view\vendas\baixa.php on line 37
+[12-Sep-2014 18:38:07 UTC] PHP Stack trace:
+[12-Sep-2014 18:38:07 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\vendas\baixa.php:0
+[12-Sep-2014 18:38:07 UTC] PHP Fatal error:  Call to a member function setData() on a non-object in C:\wamp\www\qlinda\view\vendas\baixa.php on line 37
+[12-Sep-2014 18:38:07 UTC] PHP Stack trace:
+[12-Sep-2014 18:38:07 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\vendas\baixa.php:0
+[12-Sep-2014 18:39:09 UTC] PHP Notice:  Undefined variable: pedidoVenda in C:\wamp\www\qlinda\view\vendas\baixa.php on line 39
+[12-Sep-2014 18:39:09 UTC] PHP Stack trace:
+[12-Sep-2014 18:39:09 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\vendas\baixa.php:0
+[12-Sep-2014 18:39:09 UTC] PHP Fatal error:  Call to a member function setData() on a non-object in C:\wamp\www\qlinda\view\vendas\baixa.php on line 39
+[12-Sep-2014 18:39:09 UTC] PHP Stack trace:
+[12-Sep-2014 18:39:09 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\vendas\baixa.php:0
+[12-Sep-2014 18:39:10 UTC] PHP Notice:  Undefined variable: pedidoVenda in C:\wamp\www\qlinda\view\vendas\baixa.php on line 39
+[12-Sep-2014 18:39:10 UTC] PHP Stack trace:
+[12-Sep-2014 18:39:10 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\vendas\baixa.php:0
+[12-Sep-2014 18:39:10 UTC] PHP Fatal error:  Call to a member function setData() on a non-object in C:\wamp\www\qlinda\view\vendas\baixa.php on line 39
+[12-Sep-2014 18:39:10 UTC] PHP Stack trace:
+[12-Sep-2014 18:39:10 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\vendas\baixa.php:0
+[12-Sep-2014 18:39:10 UTC] PHP Notice:  Undefined variable: pedidoVenda in C:\wamp\www\qlinda\view\vendas\baixa.php on line 39
+[12-Sep-2014 18:39:10 UTC] PHP Stack trace:
+[12-Sep-2014 18:39:10 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\vendas\baixa.php:0
+[12-Sep-2014 18:39:10 UTC] PHP Fatal error:  Call to a member function setData() on a non-object in C:\wamp\www\qlinda\view\vendas\baixa.php on line 39
+[12-Sep-2014 18:39:10 UTC] PHP Stack trace:
+[12-Sep-2014 18:39:10 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\vendas\baixa.php:0
+[12-Sep-2014 18:39:11 UTC] PHP Notice:  Undefined variable: pedidoVenda in C:\wamp\www\qlinda\view\vendas\baixa.php on line 39
+[12-Sep-2014 18:39:11 UTC] PHP Stack trace:
+[12-Sep-2014 18:39:11 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\vendas\baixa.php:0
+[12-Sep-2014 18:39:11 UTC] PHP Fatal error:  Call to a member function setData() on a non-object in C:\wamp\www\qlinda\view\vendas\baixa.php on line 39
+[12-Sep-2014 18:39:11 UTC] PHP Stack trace:
+[12-Sep-2014 18:39:11 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\vendas\baixa.php:0
+[12-Sep-2014 18:39:11 UTC] PHP Notice:  Undefined variable: pedidoVenda in C:\wamp\www\qlinda\view\vendas\baixa.php on line 39
+[12-Sep-2014 18:39:11 UTC] PHP Stack trace:
+[12-Sep-2014 18:39:11 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\vendas\baixa.php:0
+[12-Sep-2014 18:39:11 UTC] PHP Fatal error:  Call to a member function setData() on a non-object in C:\wamp\www\qlinda\view\vendas\baixa.php on line 39
+[12-Sep-2014 18:39:11 UTC] PHP Stack trace:
+[12-Sep-2014 18:39:11 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\vendas\baixa.php:0
+[12-Sep-2014 18:39:12 UTC] PHP Notice:  Undefined variable: pedidoVenda in C:\wamp\www\qlinda\view\vendas\baixa.php on line 39
+[12-Sep-2014 18:39:12 UTC] PHP Stack trace:
+[12-Sep-2014 18:39:12 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\vendas\baixa.php:0
+[12-Sep-2014 18:39:12 UTC] PHP Fatal error:  Call to a member function setData() on a non-object in C:\wamp\www\qlinda\view\vendas\baixa.php on line 39
+[12-Sep-2014 18:39:12 UTC] PHP Stack trace:
+[12-Sep-2014 18:39:12 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\vendas\baixa.php:0
+[12-Sep-2014 18:40:02 UTC] PHP Notice:  Undefined variable: pedidoVenda in C:\wamp\www\qlinda\view\vendas\baixa.php on line 39
+[12-Sep-2014 18:40:02 UTC] PHP Stack trace:
+[12-Sep-2014 18:40:02 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\vendas\baixa.php:0
+[12-Sep-2014 18:40:02 UTC] PHP Fatal error:  Call to a member function setDataPagamento() on a non-object in C:\wamp\www\qlinda\view\vendas\baixa.php on line 39
+[12-Sep-2014 18:40:02 UTC] PHP Stack trace:
+[12-Sep-2014 18:40:02 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\vendas\baixa.php:0
+[12-Sep-2014 18:40:04 UTC] PHP Notice:  Undefined variable: pedidoVenda in C:\wamp\www\qlinda\view\vendas\baixa.php on line 39
+[12-Sep-2014 18:40:04 UTC] PHP Stack trace:
+[12-Sep-2014 18:40:04 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\vendas\baixa.php:0
+[12-Sep-2014 18:40:04 UTC] PHP Fatal error:  Call to a member function setDataPagamento() on a non-object in C:\wamp\www\qlinda\view\vendas\baixa.php on line 39
+[12-Sep-2014 18:40:04 UTC] PHP Stack trace:
+[12-Sep-2014 18:40:04 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\vendas\baixa.php:0
+[12-Sep-2014 18:40:07 UTC] PHP Notice:  Undefined variable: pedidoVenda in C:\wamp\www\qlinda\view\vendas\baixa.php on line 39
+[12-Sep-2014 18:40:07 UTC] PHP Stack trace:
+[12-Sep-2014 18:40:07 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\vendas\baixa.php:0
+[12-Sep-2014 18:40:07 UTC] PHP Fatal error:  Call to a member function setDataPagamento() on a non-object in C:\wamp\www\qlinda\view\vendas\baixa.php on line 39
+[12-Sep-2014 18:40:07 UTC] PHP Stack trace:
+[12-Sep-2014 18:40:07 UTC] PHP   1. {main}() C:\wamp\www\qlinda\view\vendas\baixa.php:0
